@@ -11,6 +11,9 @@ public class PlayerScript : MonoBehaviour
 
     public float xvel, yvel;
 
+    private float spheretimer = 4;
+    public GameObject weaponType;
+
     Rigidbody2D rb;
 
     InputAction movement;
@@ -32,6 +35,8 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        spheretimer -= Time.deltaTime;
+
         xvel = rb.linearVelocity.x;
         yvel = rb.linearVelocity.y;
 
@@ -61,6 +66,14 @@ public class PlayerScript : MonoBehaviour
             print("You've sprouted Wings");
         } 
         
+
+        if (spheretimer <= 0)
+        {
+            GameObject clone;
+            clone = Instantiate(weaponType, transform.position, Quaternion.identity);
+            spheretimer = 6;
+        }
+
 
     }
 

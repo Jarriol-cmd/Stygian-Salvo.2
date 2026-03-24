@@ -279,3 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93817d2e6ad978944be5dfd37c4ee157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
+  keyAction: 1
+  controlAction: 0
+  flumeflyFeatherNumber: 5
+  xvel: 0
+  yvel: 0

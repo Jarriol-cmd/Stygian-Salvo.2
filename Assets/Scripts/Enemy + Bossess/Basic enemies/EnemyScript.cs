@@ -1,21 +1,34 @@
+using System.Net;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyScript : MonoBehaviour
 {
-    public Transform target; 
-    public float within_range;
-    public float speed;
+    public Transform player;
+    private float speed = 3.0f;
+    private Vector2 target;
 
-    public void Update()
+    void Start()
     {
         
-        float dist = Vector3.Distance(target.position, transform.position);
-        
-        if (dist <= within_range)
-        {
-            
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed);
-        }
-        
+
     }
+
+    void Update()
+    {
+
+        target = new Vector2(player.position.x, player.position.y);
+        
+        float step = speed * Time.deltaTime;
+
+        // move sprite towards the target location
+        transform.position = Vector2.MoveTowards(transform.position, target, step);
+
+        
+
+    }
+
+
+
 }
