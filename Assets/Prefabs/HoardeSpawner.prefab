@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 754058275323398679}
   - component: {fileID: 2827929049585895317}
   m_Layer: 0
-  m_Name: RushSpawner
+  m_Name: HoardeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

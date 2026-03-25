@@ -6,8 +6,13 @@ public class ScalingScript : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

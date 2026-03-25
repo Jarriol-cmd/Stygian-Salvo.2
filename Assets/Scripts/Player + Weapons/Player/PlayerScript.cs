@@ -9,9 +9,11 @@ public class PlayerScript : MonoBehaviour
     public int controlAction = 0;
     public int flumeflyFeatherNumber = 5;
 
+    public static PlayerScript instance;
+
     public float xvel, yvel;
 
-    private float spheretimer = 4;
+    public float spheretimer = 4;
     public GameObject weaponType;
 
     Rigidbody2D rb;
@@ -21,10 +23,16 @@ public class PlayerScript : MonoBehaviour
     InputAction interaction;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
-    
-    
-    
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -63,7 +71,6 @@ public class PlayerScript : MonoBehaviour
         else if (flumeflyFeatherNumber == 15)
         {
             rb.linearVelocity = movement.ReadValue<Vector2>() * 20;
-            print("You've sprouted Wings");
         } 
         
 
@@ -71,10 +78,13 @@ public class PlayerScript : MonoBehaviour
         {
             GameObject clone;
             clone = Instantiate(weaponType, transform.position, Quaternion.identity);
-            spheretimer = 6;
+            spheretimer = 4;
         }
 
 
+        
     }
 
 }
+
+

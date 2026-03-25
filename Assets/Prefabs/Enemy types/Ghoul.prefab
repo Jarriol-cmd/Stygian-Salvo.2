@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4290678925405618702}
   m_Layer: 0
   m_Name: Ghoul
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29b1d98420cfa542915b6109aec0720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
-  player: {fileID: 1233647549172872372, guid: 4bebb4de20371c541bab2e852eba814a, type: 3}
+  player: {fileID: 0}
+  healthPoints: 4
 --- !u!50 &8559255815156789683
 Rigidbody2D:
   serializedVersion: 5
