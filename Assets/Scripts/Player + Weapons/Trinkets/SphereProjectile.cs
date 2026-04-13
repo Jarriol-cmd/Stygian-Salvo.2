@@ -4,6 +4,8 @@ using static UnityEngine.GraphicsBuffer;
 
 public class SphereProjectile : MonoBehaviour
 {
+    GameObject enemyGameObject;
+
     public Transform enemy;
     private float speed = 3.0f;
     private Vector2 target;
@@ -32,37 +34,41 @@ public class SphereProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Lifetime -= Time.deltaTime;
-        if (enemy != null)
-        {
-            target = new Vector2(enemy.position.x, enemy.position.y);
-
-            float step = speed * Time.deltaTime;
-
-            // move sprite towards the target location
-            transform.position = Vector2.MoveTowards(transform.position, target, step);
-        }
-
-
-        if (Lifetime <= 0)
-        {
-            Destroy(gameObject);
-        }
-
-
-        if (chooseEnemy == true)
-        {
-
-            chooseEnemy = false;
-
-            if (GameObject.FindWithTag("Enemy") != null)
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
+        { 
+            Lifetime -= Time.deltaTime;
+            if (enemy != null)
             {
-                enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+                target = new Vector2(enemy.position.x, enemy.position.y);
+
+                float step = speed * Time.deltaTime;
+
+                // move sprite towards the target location
+                transform.position = Vector2.MoveTowards(transform.position, target, step);
             }
 
-            else if (GameObject.FindWithTag("Enemy") == null)
+
+            if (Lifetime <= 0)
             {
-                enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+                Destroy(gameObject);
+            }
+
+
+            if (chooseEnemy == true)
+            {
+
+                chooseEnemy = false;
+
+                if (GameObject.FindWithTag("Enemy") != null)
+                {
+                    enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
+                }
+
+                else if (GameObject.FindWithTag("Enemy") == null)
+                {
+                    enemyGameObject = GameObject.FindWithTag("Enemy"); 
+                    GetComponent<Transform>();
+                }
             }
         }
     }

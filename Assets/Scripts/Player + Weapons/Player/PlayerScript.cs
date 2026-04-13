@@ -43,7 +43,10 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        spheretimer -= Time.deltaTime;
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
+        { 
+           spheretimer -= Time.deltaTime;
+        }
 
         xvel = rb.linearVelocity.x;
         yvel = rb.linearVelocity.y;
@@ -59,28 +62,35 @@ public class PlayerScript : MonoBehaviour
 
         if(interaction.triggered)
         {
-            print("Yes");
+            ItemMenuScripte.instance.playerCanMove = true;
+            ItemMenuScripte.instance.inMenu = false;
         }
 
-        
-        if (flumeflyFeatherNumber < 15)
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
-            rb.linearVelocity = movement.ReadValue<Vector2>() * flumeflyFeatherNumber;
+            if (flumeflyFeatherNumber < 15)
+            {
+                rb.linearVelocity = movement.ReadValue<Vector2>() * flumeflyFeatherNumber;
+            }
+
+            else if (flumeflyFeatherNumber == 15)
+            {
+                rb.linearVelocity = movement.ReadValue<Vector2>() * 20;
+            }
+
+
+            if (spheretimer <= 0)
+            {
+                GameObject clone;
+                clone = Instantiate(weaponType, transform.position, Quaternion.identity);
+                spheretimer = 4;
+            }
         }
 
-        else if (flumeflyFeatherNumber == 15)
+        if (ItemMenuScripte.instance.playerCanMove == false)
         {
-            rb.linearVelocity = movement.ReadValue<Vector2>() * 20;
-        } 
-        
-
-        if (spheretimer <= 0)
-        {
-            GameObject clone;
-            clone = Instantiate(weaponType, transform.position, Quaternion.identity);
-            spheretimer = 4;
+            rb.linearVelocity = movement.ReadValue<Vector2>() * 0;
         }
-
 
         
     }

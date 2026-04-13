@@ -71,38 +71,76 @@ public class SpawnerScript : MonoBehaviour
 
     void GhoulSpawner()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            GameObject clone;
-            clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
-            timer = 6;
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        { 
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                GameObject clone;
+                clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
+                timer = 6;
+            }
         }
     }
 
     void ScorponSpawner()
     {
-
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                
+            }
+        }
     }
 
     void HoardeSpawner()
     {
-
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                
+            }
+        }
     }
 
     void BossSpawner()
     {
-
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                
+            }
+        }
     }
 
     void DreadSpawner()
     {
-
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                
+            }
+        }
     }
 
     void FakeSpawner()
     {
-
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                
+            }
+        }
     }
 
 }

@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour
     private Vector2 target;
     public float healthPoints = 4;
     public static EnemyScript instance;
+    Rigidbody2D rb;
 
     private void Awake()
     {
@@ -22,6 +23,8 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+
         if (GameObject.FindWithTag("Player") != null)
         {
             player = GameObject.FindWithTag("Player").GetComponent<Transform>();
@@ -36,25 +39,31 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
+        {
+            target = new Vector2(player.position.x, player.position.y);
 
-        target = new Vector2(player.position.x, player.position.y);
+            float step = speed * Time.deltaTime;
 
-        float step = speed * Time.deltaTime;
+            // move sprite towards the target location
+            transform.position = Vector2.MoveTowards(transform.position, target, step);
+        }
 
-        // move sprite towards the target location
-        transform.position = Vector2.MoveTowards(transform.position, target, step);
-
-
+        if (ItemMenuScripte.instance.playerCanMove == false)
+        {
+            rb.linearVelocity = Vector3.zero;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("PlayerProj"))
+        if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false)
         {
             healthPoints -= 2 * Time.deltaTime;
             if (healthPoints <= 0)
             {
                 collision.gameObject.GetComponent<SphereProjectile>().chooseEnemy = true;
+                ItemMenuScripte.instance.numberDefeated += 1;
                 Destroy(gameObject);
             }
         }
