@@ -34,6 +34,14 @@ public class SphereProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PlayerScript.instance.sphereProjNum != PlayerScript.instance.oldProjCount)
+        {
+            Lifetime += 1;
+            speed += 0.2f;
+        }
+
+
+
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         { 
             Lifetime -= Time.deltaTime;

@@ -1,19 +1,29 @@
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 using static UnityEditor.VersionControl.Asset;
 
 public class PlayerScript : MonoBehaviour
 {
+
     public int keyAction = 1;
     public int controlAction = 0;
+
     public int flumeflyFeatherNumber = 5;
+    public int herorbHeartNumber = 1;
+    public int sphereProjNum = 1;
+
+
+    double oldspheretimer = 4;
+    int oldHerorbHeart = 1;
+    public int oldProjCount = 1;
 
     public static PlayerScript instance;
 
     public float xvel, yvel;
 
-    public float spheretimer = 4;
+    public double spheretimer = 4;
     public GameObject weaponType;
 
     Rigidbody2D rb;
@@ -21,6 +31,10 @@ public class PlayerScript : MonoBehaviour
     InputAction movement;
     InputAction looking;
     InputAction interaction;
+
+    public int maxhealth = 10;
+    public int currenthealth = 10;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -60,11 +74,15 @@ public class PlayerScript : MonoBehaviour
             
         }
 
-        if(interaction.triggered)
+        if(currenthealth > 0)
         {
-            ItemMenuScripte.instance.playerCanMove = true;
-            ItemMenuScripte.instance.inMenu = false;
+            if (interaction.triggered)
+            {
+                ItemMenuScripte.instance.playerCanMove = true;
+                ItemMenuScripte.instance.inMenu = false;
+            }
         }
+
 
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
@@ -83,7 +101,7 @@ public class PlayerScript : MonoBehaviour
             {
                 GameObject clone;
                 clone = Instantiate(weaponType, transform.position, Quaternion.identity);
-                spheretimer = 4;
+                spheretimer = oldspheretimer;
             }
         }
 
@@ -92,8 +110,55 @@ public class PlayerScript : MonoBehaviour
             rb.linearVelocity = movement.ReadValue<Vector2>() * 0;
         }
 
+        if (currenthealth > maxhealth)
+        {
+            currenthealth = maxhealth;
+        }
+
+
+        if (herorbHeartNumber != oldHerorbHeart)
+        {
+            oldHerorbHeart = herorbHeartNumber;
+            maxhealth *= 2;
+        }
+
+        if (sphereProjNum != oldProjCount)
+        {
+            oldProjCount = sphereProjNum;
+            oldspheretimer -= 0.4;
+        }
+
+        if (oldspheretimer <= 0)
+        {
+            oldspheretimer = 1;
+        }
+
+
+        if (currenthealth <= 0)
+        {
+            RunDeath();
+        }
         
     }
+
+    private void OnGUI()
+    {
+
+        string text =  ItemMenuScripte.instance.number + " enemies until your next item" + "\nCurrent HP: " + currenthealth + "/" + maxhealth;
+
+        GUI.contentColor = Color.white;
+        GUILayout.BeginArea(new Rect(10f, 10f, 1600f, 1600f));
+        GUILayout.Label($"<size=24>{text}</size>");
+        GUILayout.EndArea();
+    }
+
+
+
+    void RunDeath()
+    {
+        ItemMenuScripte.instance.playerCanMove = false;
+    }
+
 
 }
 

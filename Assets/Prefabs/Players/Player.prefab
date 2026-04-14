@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: -319086518546859410}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,5 +282,10 @@ MonoBehaviour:
   keyAction: 1
   controlAction: 0
   flumeflyFeatherNumber: 5
+  herorbHeartNumber: 1
   xvel: 0
   yvel: 0
+  spheretimer: 4
+  weaponType: {fileID: 0}
+  maxhealth: 10
+  currenthealth: 10

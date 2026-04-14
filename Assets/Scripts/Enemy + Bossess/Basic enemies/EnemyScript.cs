@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class EnemyScript : MonoBehaviour
 {
     public Transform player;
-    private float speed = 3.0f;
+    public float speed = 3.0f;
     private Vector2 target;
     public float healthPoints = 4;
     public static EnemyScript instance;
@@ -59,13 +59,22 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false)
         {
-            healthPoints -= 2 * Time.deltaTime;
+            healthPoints -= (2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount);
             if (healthPoints <= 0)
             {
                 collision.gameObject.GetComponent<SphereProjectile>().chooseEnemy = true;
+                PlayerScript.instance.currenthealth += 1;
                 ItemMenuScripte.instance.numberDefeated += 1;
                 Destroy(gameObject);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && ItemMenuScripte.instance.inMenu == false)
+        {
+            PlayerScript.instance.currenthealth -= 1;
         }
     }
 

@@ -1,8 +1,11 @@
+using System.Threading;
 using UnityEngine;
 
 public class ScalingScript : MonoBehaviour
 {
     public static ScalingScript instance;
+
+    public float minutes = 0;
 
     private void Awake()
     {
@@ -23,6 +26,12 @@ public class ScalingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        minutes = Time.time;
+
+        if (minutes % 30 == 0 && ItemMenuScripte.instance.inMenu == false)
+        {
+            EnemyScript.instance.healthPoints += 3;
+            EnemyScript.instance.speed += 2;
+        }
     }
 }

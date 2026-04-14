@@ -11,10 +11,19 @@ public class ItemMenuScripte : MonoBehaviour
     public int numberDefeated = 0;
     public int numberNeeded = 10;
 
+    public int number = 0;
+
     public static ItemMenuScripte instance;
+
+    public UnityEngine.UI.Image myimnage;
+
+    public GameObject button;
+    public GameObject button2;
+    public GameObject button3;
 
     InputAction navigation;
     InputAction submittion;
+    InputAction escape;
 
 
 
@@ -29,8 +38,16 @@ public class ItemMenuScripte : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        escape = InputSystem.actions.FindAction("Escape");
+
         navigation = InputSystem.actions.FindAction("Navigate");
         submittion = InputSystem.actions.FindAction("Submit");
+
+        myimnage.enabled = false;
+
+        button.SetActive(false);
+        button2.SetActive(false);
+        button3.SetActive(false);
 
     }
 
@@ -46,12 +63,28 @@ public class ItemMenuScripte : MonoBehaviour
             numberNeeded += 1;
             OpenItemMenu();
         }
+
+        if (escape.triggered)
+        {
+            myimnage.enabled = false;
+
+            button.SetActive(false);
+            button2.SetActive(false);
+            button3.SetActive(false);
+
+        }
+
+        number = numberNeeded - numberDefeated;
     }
 
 
     void OpenItemMenu()
-    { 
+    {
+        myimnage.enabled = true;
 
+        button.SetActive(true);
+        button2.SetActive(true);
+        button3.SetActive(true);
 
     }
 }
