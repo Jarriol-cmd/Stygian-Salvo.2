@@ -26,12 +26,15 @@ public class ScalingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        minutes = Time.time;
+        if (ItemMenuScripte.instance.inMenu == false)
+        { 
+            minutes = Time.time;
 
-        if (minutes % 30 == 0 && ItemMenuScripte.instance.inMenu == false)
-        {
-            EnemyScript.instance.healthPoints += 3;
-            EnemyScript.instance.speed += 2;
+            if (minutes % 30 == 0 && ItemMenuScripte.instance.inMenu == false)
+            {
+                EnemyScript.instance.healthPoints += 3;
+                EnemyScript.instance.speed += 2;
+            }
         }
     }
 }

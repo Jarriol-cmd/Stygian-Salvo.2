@@ -62,15 +62,21 @@ public class ItemMenuScripte : MonoBehaviour
             numberDefeated = 0;
             numberNeeded += 1;
             OpenItemMenu();
+
+            HiddenStatsScript.instance.currentState = States.SelectedState;
+
+          
         }
 
-        if (escape.triggered)
+        if (submittion.triggered)
         {
             myimnage.enabled = false;
 
             button.SetActive(false);
             button2.SetActive(false);
             button3.SetActive(false);
+
+            HiddenStatsScript.instance.currentState = States.SelectingState;
 
         }
 

@@ -11,12 +11,12 @@ public class PlayerScript : MonoBehaviour
     public int controlAction = 0;
 
     public int flumeflyFeatherNumber = 5;
-    public int herorbHeartNumber = 1;
+    public int sherBorbHeartNumber = 1;
     public int sphereProjNum = 1;
 
 
     double oldspheretimer = 4;
-    int oldHerorbHeart = 1;
+    int oldSherBorbHeart = 1;
     public int oldProjCount = 1;
 
     public static PlayerScript instance;
@@ -96,6 +96,12 @@ public class PlayerScript : MonoBehaviour
                 rb.linearVelocity = movement.ReadValue<Vector2>() * 20;
             }
 
+            if (flumeflyFeatherNumber > 15)
+            {
+                flumeflyFeatherNumber = 15;
+            }
+
+
 
             if (spheretimer <= 0)
             {
@@ -116,9 +122,9 @@ public class PlayerScript : MonoBehaviour
         }
 
 
-        if (herorbHeartNumber != oldHerorbHeart)
+        if (sherBorbHeartNumber != oldSherBorbHeart)
         {
-            oldHerorbHeart = herorbHeartNumber;
+            oldSherBorbHeart = sherBorbHeartNumber;
             maxhealth *= 2;
         }
 
