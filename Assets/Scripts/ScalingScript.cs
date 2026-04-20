@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class ScalingScript : MonoBehaviour
 {
-    public static ScalingScript instance;
+    float timer;
 
-    public float minutes = 0;
+    public static ScalingScript instance;
+    public float healthPoints = 4;
 
     private void Awake()
     {
@@ -20,21 +21,23 @@ public class ScalingScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        timer = 20f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ItemMenuScripte.instance.inMenu == false)
-        { 
-            minutes = Time.time;
 
-            if (minutes % 30 == 0 && ItemMenuScripte.instance.inMenu == false)
+        if (ItemMenuScripte.instance.inMenu == false || ItemMenuScripte.instance.playerCanMove == true)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer < 0)
             {
-                EnemyScript.instance.healthPoints += 3;
-                EnemyScript.instance.speed += 2;
+                healthPoints += 3;
+                timer = 20f;
             }
         }
+
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,21 +9,17 @@ public class EnemyScript : MonoBehaviour
     public Transform player;
     public float speed = 3.0f;
     private Vector2 target;
-    public float healthPoints = 4;
     public static EnemyScript instance;
     Rigidbody2D rb;
+    public float currHealth = 4;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
+    public double attackTimer = 2;
 
+    public float enemyStrengthCounter;
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
 
         if (GameObject.FindWithTag("Player") != null)
@@ -35,6 +32,10 @@ public class EnemyScript : MonoBehaviour
             player = GameObject.Find("Player").GetComponent<Transform>();
         }
 
+
+        enemyStrengthCounter = 5;
+
+        currHealth = ScalingScript.instance.healthPoints;
     }
 
     void Update()
@@ -53,14 +54,15 @@ public class EnemyScript : MonoBehaviour
         {
             rb.linearVelocity = Vector3.zero;
         }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false)
         {
-            healthPoints -= (2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount);
-            if (healthPoints <= 0)
+            currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount));
+            if (currHealth <= 0)
             {
                 collision.gameObject.GetComponent<SphereProjectile>().chooseEnemy = true;
                 PlayerScript.instance.currenthealth += 1;
@@ -70,11 +72,18 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && ItemMenuScripte.instance.inMenu == false)
         {
-            PlayerScript.instance.currenthealth -= 1;
+            attackTimer -= Time.deltaTime;
+
+            if (attackTimer <= 0)
+            {
+                PlayerScript.instance.currenthealth -= 1;
+                attackTimer = 2;
+            }
+            
         }
     }
 

@@ -44,7 +44,7 @@ public class SphereProjectile : MonoBehaviour
 
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         { 
-            Lifetime -= Time.deltaTime;
+            Lifetime -= (Time.deltaTime);
             if (enemy != null)
             {
                 target = new Vector2(enemy.position.x, enemy.position.y);

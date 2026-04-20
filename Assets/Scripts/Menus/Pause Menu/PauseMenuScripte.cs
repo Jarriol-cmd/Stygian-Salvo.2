@@ -42,6 +42,8 @@ public class PauseMenuScripte : MonoBehaviour
             
         }
 
+
+
     }
 
     void OpenPauseMenu()

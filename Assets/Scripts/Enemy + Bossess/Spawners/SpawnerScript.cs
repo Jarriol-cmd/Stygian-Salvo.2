@@ -73,12 +73,12 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         { 
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 GameObject clone;
                 clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
-                timer = 6;
+                timer = Random.Range(3 , 9);
             }
         }
     }
@@ -87,7 +87,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 
@@ -99,7 +99,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 
@@ -111,7 +111,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 
@@ -123,7 +123,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 
@@ -135,7 +135,7 @@ public class SpawnerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            timer -= Time.deltaTime;
+            timer -= (Time.deltaTime);
             if (timer <= 0)
             {
                 

@@ -59,7 +59,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         { 
-           spheretimer -= Time.deltaTime;
+           spheretimer -= (Time.deltaTime);
         }
 
         xvel = rb.linearVelocity.x;

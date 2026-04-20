@@ -76,9 +76,10 @@ public class ItemMenuScripte : MonoBehaviour
             button2.SetActive(false);
             button3.SetActive(false);
 
-            HiddenStatsScript.instance.currentState = States.SelectingState;
+            
 
         }
+
 
         number = numberNeeded - numberDefeated;
     }

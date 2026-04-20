@@ -22,13 +22,15 @@ public class HiddenStatsScript : MonoBehaviour
 
     public static HiddenStatsScript instance;
 
-    int index;
+    public int index;
+    public int twindex;
 
-    GameObject flumeFly;
-    GameObject sherBorb;
-    GameObject blueOrb;
+    public GameObject flumeFly;
+    public GameObject sherBorb;
+    public GameObject blueOrb;
 
     public int topOrBottom;
+    public int twinOrBottom;
 
     public List<GameObject> trinkets;
 
@@ -61,7 +63,18 @@ public class HiddenStatsScript : MonoBehaviour
     void Update()
     {
         StateLogic();
-        
+
+
+
+        if (twindex == index)
+        {
+            twindex = UnityEngine.Random.Range(0, trinkets.Count);
+        }
+
+        if (twinOrBottom == topOrBottom)
+        {
+            twinOrBottom = UnityEngine.Random.Range(1, 3);
+        }
     }
 
 
@@ -71,7 +84,11 @@ public class HiddenStatsScript : MonoBehaviour
         if (currentState == States.SelectingState)
         {
             index = UnityEngine.Random.Range(0, trinkets.Count);
+            twindex = UnityEngine.Random.Range(0, trinkets.Count);
+
             topOrBottom = UnityEngine.Random.Range(1, 3);
+            twinOrBottom = UnityEngine.Random.Range(1, 3);
+
         }
 
         if (currentState == States.SelectedState) 
@@ -85,31 +102,31 @@ public class HiddenStatsScript : MonoBehaviour
 
     void SetPositions()
     {
-        if (topOrBottom == 1 && trinkets[index] == flumeFly)
+        if (topOrBottom == 1 && trinkets[index] == flumeFly || twinOrBottom == 1 && trinkets[twindex] == flumeFly)
         {
-            //feather.transform.position = new Vector3(1134, 142, 0);
+            feather.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
         }
 
-        else if (topOrBottom == 2 && trinkets[index] == flumeFly)
+        else if (topOrBottom == 2 && trinkets[index] == flumeFly || twinOrBottom == 2 && trinkets[twindex] == flumeFly)
         {
-            //feather.transform.position = new Vector3(0, 0, 0);
+            feather.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
         }
-
-
 
         else
         {
             feather.SetActive(false);
         }
 
-        if (topOrBottom == 1 && trinkets[index] == orb)
+
+
+        if (topOrBottom == 1 && trinkets[index] == orb || twinOrBottom == 1 && trinkets[twindex] == orb)
         {
-            //sherBorb.transform.position = new Vector3(0, 0, 0);
+            sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
         }
 
-        else if (topOrBottom == 2 && trinkets[index] == orb)
+        else if (topOrBottom == 2 && trinkets[index] == orb || twinOrBottom == 2 && trinkets[twindex] == orb)
         {
-            //sherBorb.transform.position = new Vector3(0, 0, 0);
+            sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
         }
 
         else
@@ -119,14 +136,14 @@ public class HiddenStatsScript : MonoBehaviour
 
 
 
-        if (topOrBottom == 1 && trinkets[index] == blueOrb)
+        if (topOrBottom == 1 && trinkets[index] == blueOrb || twinOrBottom == 1 && trinkets[twindex] == blueOrb)
         {
-            //blorb.transform.position = new Vector3(0, 0, 0);
+            blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
         }
 
-        else if (topOrBottom == 2 && trinkets[index] == blueOrb)
+        else if (topOrBottom == 2 && trinkets[index] == blueOrb || twinOrBottom == 2 && trinkets[twindex] == blueOrb)
         {
-            //blorb.transform.position = new Vector3(0, 0, 0);
+            blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
         }
 
         else
