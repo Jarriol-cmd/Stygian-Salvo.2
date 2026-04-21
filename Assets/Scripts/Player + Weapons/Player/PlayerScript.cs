@@ -163,6 +163,8 @@ public class PlayerScript : MonoBehaviour
     void RunDeath()
     {
         ItemMenuScripte.instance.playerCanMove = false;
+
+        
     }
 
 

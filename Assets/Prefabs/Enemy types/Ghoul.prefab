@@ -107,7 +107,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   player: {fileID: 0}
-  healthPoints: 4
+  speed: 2
+  currHealth: 4
+  attackTimer: 2
+  enemyStrengthCounter: 0
 --- !u!50 &8559255815156789683
 Rigidbody2D:
   serializedVersion: 5
@@ -169,5 +172,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: 0.05}
   m_Radius: 0.5

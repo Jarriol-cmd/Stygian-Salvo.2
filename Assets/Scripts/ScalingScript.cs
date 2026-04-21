@@ -6,7 +6,8 @@ public class ScalingScript : MonoBehaviour
     float timer;
 
     public static ScalingScript instance;
-    public float healthPoints = 4;
+    public float healthPoints = 0;
+    public int damageDealt = 0;
 
     private void Awake()
     {
@@ -22,6 +23,8 @@ public class ScalingScript : MonoBehaviour
     void Start()
     {
         timer = 20f;
+
+        
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class ScalingScript : MonoBehaviour
             if (timer < 0)
             {
                 healthPoints += 3;
+                damageDealt += 2;
                 timer = 20f;
             }
         }

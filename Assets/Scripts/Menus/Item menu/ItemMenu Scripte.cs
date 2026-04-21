@@ -68,17 +68,7 @@ public class ItemMenuScripte : MonoBehaviour
           
         }
 
-        if (submittion.triggered)
-        {
-            myimnage.enabled = false;
-
-            button.SetActive(false);
-            button2.SetActive(false);
-            button3.SetActive(false);
-
-            
-
-        }
+        
 
 
         number = numberNeeded - numberDefeated;

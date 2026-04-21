@@ -11,14 +11,34 @@ public class EnemyScript : MonoBehaviour
     private Vector2 target;
     public static EnemyScript instance;
     Rigidbody2D rb;
-    public float currHealth = 4;
+
+    public float currHealth;
+    public float maxHealth;
+    public float enHealth;
+
+    int dealingDamage;
 
     public double attackTimer = 2;
 
     public float enemyStrengthCounter;
 
+    
+
     void Start()
     {
+
+        if(gameObject.name == "Ghoul(Clone)")
+        {
+            enHealth = 4 + ScalingScript.instance.healthPoints;
+            dealingDamage = 3 + ScalingScript.instance.damageDealt;
+        }
+
+        if(gameObject.name == "Scorpon(Clone)")
+        {
+            enHealth = 2 + ScalingScript.instance.healthPoints;
+            dealingDamage = 1 + ScalingScript.instance.damageDealt;
+        }
+
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -35,7 +55,10 @@ public class EnemyScript : MonoBehaviour
 
         enemyStrengthCounter = 5;
 
-        currHealth = ScalingScript.instance.healthPoints;
+        maxHealth = enHealth + ScalingScript.instance.healthPoints;
+        currHealth = maxHealth;
+
+        //currHealth = ScalingScript.instance.healthPoints;
     }
 
     void Update()
@@ -80,7 +103,7 @@ public class EnemyScript : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                PlayerScript.instance.currenthealth -= 1;
+                PlayerScript.instance.currenthealth -= dealingDamage;
                 attackTimer = 2;
             }
             

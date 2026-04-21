@@ -104,5 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27fb52e7b705e44aa170f1fa0399127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerScript
-  SpawnedEntity: {fileID: 6996423042805386366, guid: 48725e6c95bf4da4fa197378253c3913, type: 3}
+  SpawnedEntity: {fileID: 6928243703410281602, guid: 7507605c435c64c43ad4c3e8923055c0, type: 3}
   timer: 6
