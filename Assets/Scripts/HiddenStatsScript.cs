@@ -15,6 +15,8 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject feather;
     public GameObject orb;
     public GameObject blorb;
+    public GameObject shield;
+    public GameObject honey;
 
 
 
@@ -28,6 +30,8 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject flumeFly;
     public GameObject sherBorb;
     public GameObject blueOrb;
+    public GameObject rustyShield;
+    public GameObject sweetHoney;
 
     public int topOrBottom;
     public int twinOrBottom;
@@ -48,12 +52,14 @@ public class HiddenStatsScript : MonoBehaviour
         flumeFly = feather;
         sherBorb = orb;
         blueOrb = blorb;
+        rustyShield = shield;
+        sweetHoney = honey;
 
 
 
         trinkets = new List<GameObject>();
 
-        trinkets.Add(flumeFly); trinkets.Add(sherBorb); trinkets.Add(blueOrb);
+        trinkets.Add(flumeFly); trinkets.Add(sherBorb); trinkets.Add(blueOrb); trinkets.Add(rustyShield); trinkets.Add(honey);
 
         currentState = States.SelectingState;
 
@@ -75,6 +81,8 @@ public class HiddenStatsScript : MonoBehaviour
         {
             twinOrBottom = UnityEngine.Random.Range(1, 3);
         }
+
+        
     }
 
 
@@ -149,6 +157,38 @@ public class HiddenStatsScript : MonoBehaviour
         else
         {
             blorb.SetActive(false);
+        }
+
+
+        if (topOrBottom == 1 && trinkets[index] == rustyShield || twinOrBottom == 1 && trinkets[twindex] == rustyShield)
+        {
+            shield.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
+        }
+
+        else if (topOrBottom == 2 && trinkets[index] == rustyShield || twinOrBottom == 2 && trinkets[twindex] == rustyShield)
+        {
+            shield.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
+        }
+
+        else
+        {
+            shield.SetActive(false);
+        }
+
+
+        if (topOrBottom == 1 && trinkets[index] == sweetHoney || twinOrBottom == 1 && trinkets[twindex] == sweetHoney)
+        {
+            sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
+        }
+
+        else if (topOrBottom == 2 && trinkets[index] == sweetHoney || twinOrBottom == 2 && trinkets[twindex] == sweetHoney)
+        {
+            sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
+        }
+
+        else
+        {
+            sweetHoney.SetActive(false);
         }
     }
 

@@ -29,13 +29,13 @@ public class EnemyScript : MonoBehaviour
 
         if(gameObject.name == "Ghoul(Clone)")
         {
-            enHealth = 4 + ScalingScript.instance.healthPoints;
-            dealingDamage = 3 + ScalingScript.instance.damageDealt;
+            enHealth = 3 + ScalingScript.instance.healthPoints;
+            dealingDamage = 2 + ScalingScript.instance.damageDealt;
         }
 
         if(gameObject.name == "Scorpon(Clone)")
         {
-            enHealth = 2 + ScalingScript.instance.healthPoints;
+            enHealth = 1 + ScalingScript.instance.healthPoints;
             dealingDamage = 1 + ScalingScript.instance.damageDealt;
         }
 
@@ -82,7 +82,7 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false)
+        if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
             currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount));
             if (currHealth <= 0)
@@ -97,13 +97,13 @@ public class EnemyScript : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && ItemMenuScripte.instance.inMenu == false)
+        if (collision.gameObject.tag == "Player" && ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
             attackTimer -= Time.deltaTime;
 
             if (attackTimer <= 0)
             {
-                PlayerScript.instance.currenthealth -= dealingDamage;
+                PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense * 3));
                 attackTimer = 2;
             }
             

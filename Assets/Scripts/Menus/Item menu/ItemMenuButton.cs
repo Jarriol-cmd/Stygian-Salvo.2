@@ -8,10 +8,14 @@ public class ItemMenuButton : MonoBehaviour
     public int flumePick;
     public int sherPick;
     public int orbPick;
+    public int shieldPick;
+    public int honeyPick;
 
     public GameObject button;
     public GameObject button2;
     public GameObject button3;
+    public GameObject button4;
+    public GameObject button5;
 
 
     public static ItemMenuButton instance;
@@ -58,6 +62,21 @@ public class ItemMenuButton : MonoBehaviour
             
         }
 
+        if (shieldPick >= 15)
+        {
+
+            button4.SetActive(false);
+            HiddenStatsScript.instance.trinkets.Remove(HiddenStatsScript.instance.rustyShield);
+
+        }
+
+        if (honeyPick >= 5)
+        {
+
+            button5.SetActive(false);
+            HiddenStatsScript.instance.trinkets.Remove(HiddenStatsScript.instance.sweetHoney);
+
+        }
 
     }
 
@@ -87,6 +106,28 @@ public class ItemMenuButton : MonoBehaviour
     {
         PlayerScript.instance.sphereProjNum += 1;
         orbPick += 1;
+
+        ItemMenuScripte.instance.playerCanMove = true;
+        ItemMenuScripte.instance.inMenu = false;
+
+        HiddenStatsScript.instance.currentState = States.SelectingState;
+    }
+
+    public void Shield()
+    {
+        PlayerScript.instance.rustedShield += 1;
+        shieldPick += 1;
+
+        ItemMenuScripte.instance.playerCanMove = true;
+        ItemMenuScripte.instance.inMenu = false;
+
+        HiddenStatsScript.instance.currentState = States.SelectingState;
+    }
+
+    public void honey()
+    {
+        PlayerScript.instance.sweetestHoney += 1;
+        honeyPick += 1;
 
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;

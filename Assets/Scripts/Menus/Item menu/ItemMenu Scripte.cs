@@ -20,6 +20,8 @@ public class ItemMenuScripte : MonoBehaviour
     public GameObject button;
     public GameObject button2;
     public GameObject button3;
+    public GameObject button4;
+    public GameObject button5;
 
     InputAction navigation;
     InputAction submittion;
@@ -48,6 +50,8 @@ public class ItemMenuScripte : MonoBehaviour
         button.SetActive(false);
         button2.SetActive(false);
         button3.SetActive(false);
+        button4.SetActive(false);
+        button5.SetActive(false);
 
     }
 
@@ -82,6 +86,8 @@ public class ItemMenuScripte : MonoBehaviour
         button.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
+        button4.SetActive(true);
+        button5.SetActive(true);
 
     }
 }

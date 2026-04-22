@@ -12,7 +12,7 @@ public class TimerScript : MonoBehaviour
     {
         secondsPassed = Mathf.Round(Time.time);
 
-        if (secondsPassed >= 30)
+        if (secondsPassed >= 45)
         {
             Scorpons.SetActive(true);
         }

@@ -92,7 +92,7 @@ public class SpawnerScript : MonoBehaviour
             {
                 GameObject clone;
                 clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
-                timer = Random.Range(5, 13);
+                timer = Random.Range(7, 15);
             }
         }
     }

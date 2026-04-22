@@ -13,11 +13,21 @@ public class PlayerScript : MonoBehaviour
     public int flumeflyFeatherNumber = 5;
     public int sherBorbHeartNumber = 1;
     public int sphereProjNum = 1;
+    public int rustedShield = 1;
+    public int sweetestHoney = 0;
 
 
     double oldspheretimer = 4;
     int oldSherBorbHeart = 1;
     public int oldProjCount = 1;
+    public int oldRustedShield = 1;
+    public int oldSweets = 0;
+    
+    public int defense;
+
+    public int healthRegen = 5;
+    public float regenTimer = 10;
+    public float oldRegenTimer = 10;
 
     public static PlayerScript instance;
 
@@ -62,6 +72,11 @@ public class PlayerScript : MonoBehaviour
            spheretimer -= (Time.deltaTime);
         }
 
+        if(ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && ItemMenuButton.instance.honeyPick >= 1)
+        {
+            regenTimer -= (Time.deltaTime);
+        }
+
         xvel = rb.linearVelocity.x;
         yvel = rb.linearVelocity.y;
 
@@ -76,11 +91,13 @@ public class PlayerScript : MonoBehaviour
 
         if(currenthealth > 0)
         {
+            /*
             if (interaction.triggered)
             {
                 ItemMenuScripte.instance.playerCanMove = true;
                 ItemMenuScripte.instance.inMenu = false;
             }
+            */
         }
 
 
@@ -109,6 +126,13 @@ public class PlayerScript : MonoBehaviour
                 clone = Instantiate(weaponType, transform.position, Quaternion.identity);
                 spheretimer = oldspheretimer;
             }
+
+            if (regenTimer <= 0)
+            {
+                currenthealth += healthRegen;
+                regenTimer = oldRegenTimer;
+            }
+
         }
 
         if (ItemMenuScripte.instance.playerCanMove == false)
@@ -137,6 +161,20 @@ public class PlayerScript : MonoBehaviour
         if (oldspheretimer <= 0)
         {
             oldspheretimer = 1;
+        }
+
+        if (rustedShield != oldRustedShield)
+        {
+            oldRustedShield = rustedShield;
+            defense += 1;
+        }
+
+        if (sweetestHoney != oldSweets)
+        {
+            oldSweets = sweetestHoney;
+            healthRegen += 5;
+            oldRegenTimer -= 1;
+
         }
 
 
