@@ -10,12 +10,14 @@ public class ItemMenuButton : MonoBehaviour
     public int orbPick;
     public int shieldPick;
     public int honeyPick;
+    public int flamPick;
 
     public GameObject button;
     public GameObject button2;
     public GameObject button3;
     public GameObject button4;
     public GameObject button5;
+    public GameObject button6;
 
 
     public static ItemMenuButton instance;
@@ -78,6 +80,14 @@ public class ItemMenuButton : MonoBehaviour
 
         }
 
+        if (flamPick >= 3)
+        {
+
+            button6.SetActive(false);
+            HiddenStatsScript.instance.trinkets.Remove(HiddenStatsScript.instance.everFlame);
+
+        }
+
     }
 
     public void Flume()
@@ -128,6 +138,17 @@ public class ItemMenuButton : MonoBehaviour
     {
         PlayerScript.instance.sweetestHoney += 1;
         honeyPick += 1;
+
+        ItemMenuScripte.instance.playerCanMove = true;
+        ItemMenuScripte.instance.inMenu = false;
+
+        HiddenStatsScript.instance.currentState = States.SelectingState;
+    }
+
+    public void Flame()
+    {
+        PlayerScript.instance.everFlame += 1;
+        flamPick += 1;
 
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;

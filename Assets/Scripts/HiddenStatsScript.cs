@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Unity.Loading;
+using Unity.Properties;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public enum States
@@ -17,6 +21,7 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject blorb;
     public GameObject shield;
     public GameObject honey;
+    public GameObject flame;
 
 
 
@@ -32,6 +37,7 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject blueOrb;
     public GameObject rustyShield;
     public GameObject sweetHoney;
+    public GameObject everFlame;
 
     public int topOrBottom;
     public int twinOrBottom;
@@ -54,12 +60,13 @@ public class HiddenStatsScript : MonoBehaviour
         blueOrb = blorb;
         rustyShield = shield;
         sweetHoney = honey;
+        everFlame = flame;
 
 
 
         trinkets = new List<GameObject>();
 
-        trinkets.Add(flumeFly); trinkets.Add(sherBorb); trinkets.Add(blueOrb); trinkets.Add(rustyShield); trinkets.Add(honey);
+        trinkets.Add(flumeFly); trinkets.Add(sherBorb); trinkets.Add(blueOrb); trinkets.Add(rustyShield); trinkets.Add(honey); trinkets.Add(flame);
 
         currentState = States.SelectingState;
 
@@ -110,86 +117,108 @@ public class HiddenStatsScript : MonoBehaviour
 
     void SetPositions()
     {
-        if (topOrBottom == 1 && trinkets[index] == flumeFly || twinOrBottom == 1 && trinkets[twindex] == flumeFly)
+
+        
         {
-            feather.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
+            if (topOrBottom == 1 && trinkets[index] == flumeFly || twinOrBottom == 1 && trinkets[twindex] == flumeFly)
+            {
+                feather.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == flumeFly || twinOrBottom == 2 && trinkets[twindex] == flumeFly)
+            {
+                feather.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                feather.SetActive(false);
+            }
+
+
+
+            if (topOrBottom == 1 && trinkets[index] == orb || twinOrBottom == 1 && trinkets[twindex] == orb)
+            {
+                sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == orb || twinOrBottom == 2 && trinkets[twindex] == orb)
+            {
+                sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                sherBorb.SetActive(false);
+            }
+
+
+
+            if (topOrBottom == 1 && trinkets[index] == blueOrb || twinOrBottom == 1 && trinkets[twindex] == blueOrb)
+            {
+                blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == blueOrb || twinOrBottom == 2 && trinkets[twindex] == blueOrb)
+            {
+                blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                blorb.SetActive(false);
+            }
+
+
+            if (topOrBottom == 1 && trinkets[index] == rustyShield || twinOrBottom == 1 && trinkets[twindex] == rustyShield)
+            {
+                shield.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == rustyShield || twinOrBottom == 2 && trinkets[twindex] == rustyShield)
+            {
+                shield.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                shield.SetActive(false);
+            }
+
+
+            if (topOrBottom == 1 && trinkets[index] == sweetHoney || twinOrBottom == 1 && trinkets[twindex] == sweetHoney)
+            {
+                sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == sweetHoney || twinOrBottom == 2 && trinkets[twindex] == sweetHoney)
+            {
+                sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                sweetHoney.SetActive(false);
+            }
+
+
+            if (topOrBottom == 1 && trinkets[index] == everFlame || twinOrBottom == 1 && trinkets[twindex] == everFlame)
+            {
+                everFlame.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+            }
+
+            else if (topOrBottom == 2 && trinkets[index] == everFlame || twinOrBottom == 2 && trinkets[twindex] == everFlame)
+            {
+                everFlame.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+            }
+
+            else
+            {
+                everFlame.SetActive(false);
+            }
+
         }
 
-        else if (topOrBottom == 2 && trinkets[index] == flumeFly || twinOrBottom == 2 && trinkets[twindex] == flumeFly)
-        {
-            feather.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
-        }
-
-        else
-        {
-            feather.SetActive(false);
-        }
-
-
-
-        if (topOrBottom == 1 && trinkets[index] == orb || twinOrBottom == 1 && trinkets[twindex] == orb)
-        {
-            sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
-        }
-
-        else if (topOrBottom == 2 && trinkets[index] == orb || twinOrBottom == 2 && trinkets[twindex] == orb)
-        {
-            sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
-        }
-
-        else
-        {
-            sherBorb.SetActive(false);
-        }
-
-
-
-        if (topOrBottom == 1 && trinkets[index] == blueOrb || twinOrBottom == 1 && trinkets[twindex] == blueOrb)
-        {
-            blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
-        }
-
-        else if (topOrBottom == 2 && trinkets[index] == blueOrb || twinOrBottom == 2 && trinkets[twindex] == blueOrb)
-        {
-            blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
-        }
-
-        else
-        {
-            blorb.SetActive(false);
-        }
-
-
-        if (topOrBottom == 1 && trinkets[index] == rustyShield || twinOrBottom == 1 && trinkets[twindex] == rustyShield)
-        {
-            shield.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
-        }
-
-        else if (topOrBottom == 2 && trinkets[index] == rustyShield || twinOrBottom == 2 && trinkets[twindex] == rustyShield)
-        {
-            shield.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
-        }
-
-        else
-        {
-            shield.SetActive(false);
-        }
-
-
-        if (topOrBottom == 1 && trinkets[index] == sweetHoney || twinOrBottom == 1 && trinkets[twindex] == sweetHoney)
-        {
-            sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, 150f, 0);
-        }
-
-        else if (topOrBottom == 2 && trinkets[index] == sweetHoney || twinOrBottom == 2 && trinkets[twindex] == sweetHoney)
-        {
-            sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, -150f, 0);
-        }
-
-        else
-        {
-            sweetHoney.SetActive(false);
-        }
     }
 
 }

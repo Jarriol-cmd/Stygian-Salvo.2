@@ -15,13 +15,23 @@ public class PlayerScript : MonoBehaviour
     public int sphereProjNum = 1;
     public int rustedShield = 1;
     public int sweetestHoney = 0;
+    public int everFlame = 0;
 
 
     double oldspheretimer = 4;
+    double oldFlamTimer = 6;
+
     int oldSherBorbHeart = 1;
+
+    public int oldFlamnum = 0;
     public int oldProjCount = 1;
+
+
     public int oldRustedShield = 1;
+
+
     public int oldSweets = 0;
+
     
     public int defense;
 
@@ -34,7 +44,10 @@ public class PlayerScript : MonoBehaviour
     public float xvel, yvel;
 
     public double spheretimer = 4;
-    public GameObject weaponType;
+    public double flamTimer = 10;
+
+    public GameObject blorbType;
+    public GameObject flamType;
 
     Rigidbody2D rb;
 
@@ -44,6 +57,7 @@ public class PlayerScript : MonoBehaviour
 
     public int maxhealth = 10;
     public int currenthealth = 10;
+
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -72,7 +86,13 @@ public class PlayerScript : MonoBehaviour
            spheretimer -= (Time.deltaTime);
         }
 
-        if(ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && ItemMenuButton.instance.honeyPick >= 1)
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && everFlame >= 1)
+        {
+            flamTimer -= (Time.deltaTime);
+        }
+
+
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && sweetestHoney > 0)
         {
             regenTimer -= (Time.deltaTime);
         }
@@ -123,8 +143,15 @@ public class PlayerScript : MonoBehaviour
             if (spheretimer <= 0)
             {
                 GameObject clone;
-                clone = Instantiate(weaponType, transform.position, Quaternion.identity);
+                clone = Instantiate(blorbType, transform.position, Quaternion.identity);
                 spheretimer = oldspheretimer;
+            }
+
+            if (flamTimer <= 0)
+            {
+                GameObject clone;
+                clone = Instantiate(flamType, transform.position, Quaternion.identity);
+                flamTimer = oldFlamTimer;
             }
 
             if (regenTimer <= 0)
@@ -177,10 +204,24 @@ public class PlayerScript : MonoBehaviour
 
         }
 
+        if (everFlame != oldFlamnum)
+        {
+            oldFlamnum = everFlame;
+            oldFlamTimer -= 1;
+
+        }
+
 
         if (currenthealth <= 0)
         {
             RunDeath();
+        }
+
+
+
+        if(gameObject.transform.position.x > 40 || gameObject.transform.position.x < -40 || gameObject.transform.position.y > 38 || gameObject.transform.position.y < -38)
+        {
+            gameObject.transform.position = new Vector3(0, 0, 0);
         }
         
     }

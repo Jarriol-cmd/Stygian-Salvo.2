@@ -19,6 +19,7 @@ public class EnemyScript : MonoBehaviour
     int dealingDamage;
 
     public double attackTimer = 2;
+    public double regAtkTimer;
 
     public float enemyStrengthCounter;
 
@@ -31,12 +32,21 @@ public class EnemyScript : MonoBehaviour
         {
             enHealth = 3 + ScalingScript.instance.healthPoints;
             dealingDamage = 2 + ScalingScript.instance.damageDealt;
+            regAtkTimer = 2;
         }
 
         if(gameObject.name == "Scorpon(Clone)")
         {
             enHealth = 1 + ScalingScript.instance.healthPoints;
-            dealingDamage = 1 + ScalingScript.instance.damageDealt;
+            dealingDamage = ((1 + ScalingScript.instance.damageDealt) / 3);
+            regAtkTimer = 0.5;
+        }
+
+        if (gameObject.name == "Hoarde(Clone)")
+        {
+            enHealth = 7 + ScalingScript.instance.healthPoints;
+            dealingDamage = 7 + ScalingScript.instance.damageDealt;
+            regAtkTimer = 5;
         }
 
 
@@ -49,7 +59,7 @@ public class EnemyScript : MonoBehaviour
 
         else if (GameObject.FindWithTag("Player") == null)
         {
-            player = GameObject.Find("Player").GetComponent<Transform>();
+            player = GameObject.FindWithTag("Player").GetComponent<Transform>();
         }
 
 
@@ -84,12 +94,35 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == ("PlayerProj") && ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
-            currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount));
+            if(collision.name == "Sphere projectile(Clone)")
+            {
+                currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount));
+            }
+
+            if(collision.name == "Cinders(Clone)")
+            {
+                currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldFlamnum));
+            }
+
             if (currHealth <= 0)
             {
-                collision.gameObject.GetComponent<SphereProjectile>().chooseEnemy = true;
-                PlayerScript.instance.currenthealth += 1;
-                ItemMenuScripte.instance.numberDefeated += 1;
+                SphereProjectile.instance.chooseEnemy = true;
+
+                if (gameObject.name == "Ghoul(Clone)")
+                {
+                    ItemMenuScripte.instance.numberDefeated += 1;
+                }
+
+                if (gameObject.name == "Scorpon(Clone)")
+                {
+                    ItemMenuScripte.instance.numberDefeated += 1;
+                }
+
+                if (gameObject.name == "Hoarde(Clone)")
+                {
+                    ItemMenuScripte.instance.numberDefeated += 2;
+                }
+
                 Destroy(gameObject);
             }
         }
@@ -104,7 +137,7 @@ public class EnemyScript : MonoBehaviour
             if (attackTimer <= 0)
             {
                 PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense * 3));
-                attackTimer = 2;
+                attackTimer = regAtkTimer;
             }
             
         }

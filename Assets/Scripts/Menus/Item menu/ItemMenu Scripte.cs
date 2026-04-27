@@ -9,7 +9,7 @@ public class ItemMenuScripte : MonoBehaviour
     public bool playerCanMove = true;
     public bool inMenu = false;
     public int numberDefeated = 0;
-    public int numberNeeded = 10;
+    public int numberNeeded = 4;
 
     public int number = 0;
 
@@ -22,6 +22,7 @@ public class ItemMenuScripte : MonoBehaviour
     public GameObject button3;
     public GameObject button4;
     public GameObject button5;
+    public GameObject button6;
 
     InputAction navigation;
     InputAction submittion;
@@ -52,6 +53,7 @@ public class ItemMenuScripte : MonoBehaviour
         button3.SetActive(false);
         button4.SetActive(false);
         button5.SetActive(false);
+        button6.SetActive(false);
 
     }
 
@@ -88,6 +90,7 @@ public class ItemMenuScripte : MonoBehaviour
         button3.SetActive(true);
         button4.SetActive(true);
         button5.SetActive(true);
+        button6.SetActive(true);
 
     }
 }

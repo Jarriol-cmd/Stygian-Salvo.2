@@ -1,5 +1,7 @@
+using System.Linq.Expressions;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class SphereProjectile : MonoBehaviour
@@ -7,6 +9,8 @@ public class SphereProjectile : MonoBehaviour
     GameObject enemyGameObject;
 
     public Transform enemy;
+    
+
     private float speed = 3.0f;
     private Vector2 target;
     private float Lifetime = 7;
@@ -28,13 +32,15 @@ public class SphereProjectile : MonoBehaviour
     void Start()
     {
       chooseEnemy = true;
-        enemy = null;
+      enemy = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerScript.instance.sphereProjNum != PlayerScript.instance.oldProjCount)
+
+
+        if (PlayerScript.instance.sphereProjNum != PlayerScript.instance.oldProjCount)
         {
             Lifetime += 1;
             speed += 0.2f;
