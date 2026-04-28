@@ -2,6 +2,7 @@ using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -55,5 +56,12 @@ public class PauseMenuScripte : MonoBehaviour
         button.SetActive(true);
         button2.SetActive(true);
         button3.SetActive(true);
+    }
+
+
+
+    public void QuitButton()
+    {
+        SceneManager.LoadSceneAsync("Menu");
     }
 }

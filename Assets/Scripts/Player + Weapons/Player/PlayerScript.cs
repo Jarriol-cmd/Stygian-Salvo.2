@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour
 
 
     double oldspheretimer = 4;
-    double oldFlamTimer = 6;
+    double oldFlamTimer = 10;
 
     int oldSherBorbHeart = 1;
 
@@ -86,7 +86,7 @@ public class PlayerScript : MonoBehaviour
            spheretimer -= (Time.deltaTime);
         }
 
-        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && everFlame >= 1)
+        if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false && everFlame > 0)
         {
             flamTimer -= (Time.deltaTime);
         }

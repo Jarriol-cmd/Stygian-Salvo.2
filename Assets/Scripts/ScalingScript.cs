@@ -31,11 +31,11 @@ public class ScalingScript : MonoBehaviour
     void Update()
     {
 
-        if (ItemMenuScripte.instance.inMenu == false || ItemMenuScripte.instance.playerCanMove == true)
+        if (ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
             timer -= Time.deltaTime;
 
-            if (timer < 0)
+            if (timer <= 0)
             {
                 healthPoints += 3;
                 damageDealt += 2;

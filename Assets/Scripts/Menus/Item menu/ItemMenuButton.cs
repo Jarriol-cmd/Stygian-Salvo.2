@@ -64,7 +64,7 @@ public class ItemMenuButton : MonoBehaviour
             
         }
 
-        if (shieldPick >= 15)
+        if (shieldPick >= 99)
         {
 
             button4.SetActive(false);

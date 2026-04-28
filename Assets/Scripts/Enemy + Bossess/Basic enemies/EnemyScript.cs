@@ -88,6 +88,11 @@ public class EnemyScript : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
         }
 
+        if(currHealth <= 0)
+        {
+            SphereProjectile.instance.chooseEnemy = true;
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -136,7 +141,7 @@ public class EnemyScript : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense * 3));
+                PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense));
                 attackTimer = regAtkTimer;
             }
             
