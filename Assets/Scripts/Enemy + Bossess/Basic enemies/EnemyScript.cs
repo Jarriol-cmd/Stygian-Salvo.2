@@ -49,6 +49,13 @@ public class EnemyScript : MonoBehaviour
             regAtkTimer = 5;
         }
 
+        if(gameObject.name == "The Wings(Clone)")
+        {
+            enHealth = 40;
+            dealingDamage = 2;
+            regAtkTimer = 2;
+        }
+
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -128,6 +135,11 @@ public class EnemyScript : MonoBehaviour
                     ItemMenuScripte.instance.numberDefeated += 2;
                 }
 
+                if(gameObject.tag == "Boss")
+                {
+                    ItemMenuScripte.instance.numberDefeated = ItemMenuScripte.instance.numberNeeded;
+                }
+
                 Destroy(gameObject);
             }
         }
@@ -141,8 +153,17 @@ public class EnemyScript : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense));
-                attackTimer = regAtkTimer;
+                if (gameObject.tag != "Boss")
+                {
+                    PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense));
+                }
+
+                else
+                {
+                    PlayerScript.instance.currenthealth -= dealingDamage;
+                }
+
+                    attackTimer = regAtkTimer;
             }
             
         }

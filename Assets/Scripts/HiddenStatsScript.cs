@@ -22,6 +22,7 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject shield;
     public GameObject honey;
     public GameObject flame;
+    public GameObject menu;
 
 
 
@@ -90,6 +91,14 @@ public class HiddenStatsScript : MonoBehaviour
         }
 
         
+
+        if(trinkets.Count <= 0)
+        {
+            menu.SetActive(false);
+            ItemMenuScripte.instance.inMenu = false;
+            ItemMenuScripte.instance.playerCanMove = true;
+        }
+
     }
 
 

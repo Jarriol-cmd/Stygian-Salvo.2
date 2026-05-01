@@ -224352,6 +224352,7 @@ MonoBehaviour:
   shield: {fileID: 829154328}
   honey: {fileID: 792077221}
   flame: {fileID: 517902333}
+  menu: {fileID: 0}
   currentState: 0
   index: 0
   twindex: 0
@@ -231796,6 +231797,10 @@ PrefabInstance:
     - target: {fileID: 5175720684162642893, guid: a5f7917c45c75cb4c8a4ae0b2e60476e, type: 3}
       propertyPath: m_Name
       value: BossSpawner - Dread's Claws
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175720684162642893, guid: a5f7917c45c75cb4c8a4ae0b2e60476e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

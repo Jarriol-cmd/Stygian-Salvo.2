@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
@@ -49,7 +50,7 @@ public class SpawnerScript : MonoBehaviour
             HoardeSpawner();
         }
 
-        if (gameObject.name == "BossSpawner - Dread's Claws" || gameObject.name == "BossSpawner - Dread's Fangs" || gameObject.name == "BossSpawner - Dread's Wings" || gameObject.name == "BossSpawner - Dread's Hide")
+        if (gameObject.name == "BossSpawner - Dread's Claws" || gameObject.name == "BossSpawner - Dread's Fangs" || gameObject.name == "BossSpawner - Dread's Wings" || gameObject.name == "BossSpawner - Dread's Hide" || gameObject.name == "BossSpawner")
         {
             SpawnedEnemy = SpawnerState.Boss;
             BossSpawner();
@@ -130,7 +131,9 @@ public class SpawnerScript : MonoBehaviour
             timer -= (Time.deltaTime);
             if (timer <= 0)
             {
-                
+                GameObject clone;
+                clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }
