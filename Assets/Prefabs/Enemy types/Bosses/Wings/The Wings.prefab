@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   player: {fileID: 0}
   speed: 6
-  currHealth: 40
+  currHealth: 70
   maxHealth: 0
   enHealth: 0
   attackTimer: 0.5

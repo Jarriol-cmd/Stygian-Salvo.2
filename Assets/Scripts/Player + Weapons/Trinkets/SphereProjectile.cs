@@ -80,7 +80,7 @@ public class SphereProjectile : MonoBehaviour
 
                 else if (GameObject.FindWithTag("Enemy") == null)
                 {
-                    enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>(); ; 
+                    enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
                 }
 
                 else

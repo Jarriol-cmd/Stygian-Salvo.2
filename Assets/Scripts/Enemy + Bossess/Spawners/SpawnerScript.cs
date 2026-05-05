@@ -119,7 +119,9 @@ public class SpawnerScript : MonoBehaviour
             timer -= (Time.deltaTime);
             if (timer <= 0)
             {
-                
+                GameObject clone;
+                clone = Instantiate(SpawnedEntity, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }

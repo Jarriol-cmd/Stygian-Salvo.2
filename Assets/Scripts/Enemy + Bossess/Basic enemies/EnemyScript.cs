@@ -137,7 +137,10 @@ public class EnemyScript : MonoBehaviour
 
                 if(gameObject.tag == "Boss")
                 {
-                    ItemMenuScripte.instance.numberDefeated = ItemMenuScripte.instance.numberNeeded;
+                    ItemMenuScripte.instance.playerCanMove = false;
+                    ItemMenuScripte.instance.inMenu = true;
+
+                    BosskillerScript.instance.isDead += 1;
                 }
 
                 Destroy(gameObject);

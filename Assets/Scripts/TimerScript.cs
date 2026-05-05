@@ -5,8 +5,9 @@ public class TimerScript : MonoBehaviour
 
     public double secondsPassed;
 
-    public GameObject Scorpons;
-    public GameObject Hoardes;
+    public GameObject scorpons;
+    public GameObject hoardes;
+    public GameObject boss;
 
     // Update is called once per frame
     void Update()
@@ -15,12 +16,18 @@ public class TimerScript : MonoBehaviour
 
         if (secondsPassed >= 45)
         {
-            Scorpons.SetActive(true);
+            scorpons.SetActive(true);
         }
 
         if (secondsPassed >= 90)
         {
-            Hoardes.SetActive(true);
+            hoardes.SetActive(true);
+        }
+
+
+        if (secondsPassed >= 300)
+        {
+            boss.SetActive(true);
         }
 
     }
