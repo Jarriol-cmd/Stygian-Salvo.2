@@ -24,7 +24,10 @@ public class MainMenuButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(submit.triggered)
+        {
+            
+        }
     }
 
     public void LoadLevel()

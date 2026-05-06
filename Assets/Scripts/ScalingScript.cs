@@ -22,9 +22,11 @@ public class ScalingScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timer = 35f;
+        timer = 20f;
 
-        
+        healthPoints = 0;
+        damageDealt = 0;
+
     }
 
     // Update is called once per frame
@@ -39,7 +41,7 @@ public class ScalingScript : MonoBehaviour
             {
                 healthPoints += 3;
                 damageDealt += 2;
-                timer = 35f;
+                timer = 20f;
             }
         }
 

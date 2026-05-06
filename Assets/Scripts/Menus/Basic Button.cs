@@ -26,7 +26,7 @@ public class BasicButton : MonoBehaviour
         
     }
 
-    private void OnSelect()
+    public void OnSelect()
     {
         button.Select();
     }

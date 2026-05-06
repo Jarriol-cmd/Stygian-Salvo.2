@@ -78,7 +78,7 @@ public class SphereProjectile : MonoBehaviour
                     enemy = GameObject.FindWithTag("Boss").GetComponent<Transform>();
                 }
 
-                else if (GameObject.FindWithTag("Enemy") == null)
+                else if (GameObject.FindWithTag("Enemy") != null)
                 {
                     enemy = GameObject.FindWithTag("Enemy").GetComponent<Transform>();
                 }

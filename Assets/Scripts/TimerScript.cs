@@ -9,26 +9,35 @@ public class TimerScript : MonoBehaviour
     public GameObject hoardes;
     public GameObject boss;
 
+
+    private void Start()
+    {
+        secondsPassed = 0;
+    }
+
+
     // Update is called once per frame
     void Update()
     {
-        secondsPassed = Mathf.Round(Time.time);
-
-        if (secondsPassed >= 45)
+        if(ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
-            scorpons.SetActive(true);
+            secondsPassed = (Time.deltaTime);
+
+            if (secondsPassed >= 45)
+            {
+                scorpons.SetActive(true);
+            }
+
+            if (secondsPassed >= 90)
+            {
+                hoardes.SetActive(true);
+            }
+
+
+            if (secondsPassed >= 300)
+            {
+                boss.SetActive(true);
+            }
         }
-
-        if (secondsPassed >= 90)
-        {
-            hoardes.SetActive(true);
-        }
-
-
-        if (secondsPassed >= 300)
-        {
-            boss.SetActive(true);
-        }
-
     }
 }

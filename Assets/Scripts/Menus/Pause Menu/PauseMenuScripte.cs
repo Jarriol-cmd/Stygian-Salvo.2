@@ -20,6 +20,8 @@ public class PauseMenuScripte : MonoBehaviour
     public GameObject button2;
     public GameObject button3;
 
+    public UnityEngine.UI.Button contin;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,6 +42,8 @@ public class PauseMenuScripte : MonoBehaviour
         if (escape.triggered)
         {
             OpenPauseMenu();
+
+            contin.Select();
             
         }
 
