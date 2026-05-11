@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuButton : MonoBehaviour
 {
+    public AudioMixer mixer;
 
     InputAction submit;
     public Button button;
@@ -45,5 +47,28 @@ public class MainMenuButton : MonoBehaviour
         button.Select();
     }
 
+
+
+    public void ChangeMusicVolume(float volume)
+    {
+
+        AudioScript.instance.audioVolume = volume;
+        PlayerPrefs.SetFloat("AudioVolume", AudioScript.instance.audioVolume);
+        
+        mixer.SetFloat("AudioVol", Mathf.Log10(volume) * 20);
+    }
+
+    public void ChangeSFXVolume(float sVolume)
+    {
+        AudioScript.instance.sfxVolume = sVolume;
+        PlayerPrefs.SetFloat("SfxVolume", AudioScript.instance.sfxVolume);
+        
+        mixer.SetFloat("SFXVol", Mathf.Log10(sVolume) * 20);
+    }
+
+    public void Soundtest()
+    {
+        AudioScript.instance.PlaySFX("Death");
+    }
 
 }

@@ -21,7 +21,7 @@ public class TimerScript : MonoBehaviour
     {
         if(ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
-            secondsPassed = (Time.deltaTime);
+            secondsPassed += (Time.deltaTime);
 
             if (secondsPassed >= 45)
             {

@@ -219348,6 +219348,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1850, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &852676235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852676237}
+  - component: {fileID: 852676236}
+  m_Layer: 0
+  m_Name: Audio Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &852676236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852676235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83330700ed8d822409a718ccae565d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioScript
+  audioVolume: 0
+  sfxVolume: 0
+  audioAudio: 0
+  sfxAudio: 0
+  mixerp: {fileID: 24100000, guid: 6091e58bde4a1b24e9d33d1c6ac53bc2, type: 2}
+  sounds:
+  - name: Death
+    clip: {fileID: 8300000, guid: b989d1bff13acb6439e22d55cb46e897, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+    mixerGroup: {fileID: 4927411408221308857, guid: 6091e58bde4a1b24e9d33d1c6ac53bc2, type: 2}
+  - name: Wing shooting
+    clip: {fileID: 8300000, guid: a61cd347734e7c044b831c5accb22956, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+    loop: 0
+    mixerGroup: {fileID: 4927411408221308857, guid: 6091e58bde4a1b24e9d33d1c6ac53bc2, type: 2}
+  mute: 0
+--- !u!4 &852676237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852676235}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &887001110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233642,3 +233707,4 @@ SceneRoots:
   - {fileID: 2147441100}
   - {fileID: 538737199}
   - {fileID: 715150724}
+  - {fileID: 852676237}

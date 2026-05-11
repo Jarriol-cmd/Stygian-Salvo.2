@@ -244,6 +244,7 @@ public class PlayerScript : MonoBehaviour
         ItemMenuScripte.instance.playerCanMove = false;
         ItemMenuScripte.instance.inMenu = true;
 
+        AudioScript.instance.PlaySFX("Death");
         
     }
 
