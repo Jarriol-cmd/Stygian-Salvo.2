@@ -23,20 +23,23 @@ public class TimerScript : MonoBehaviour
         {
             secondsPassed += (Time.deltaTime);
 
-            if (secondsPassed >= 45)
+            if (secondsPassed > 45 && secondsPassed < 46)
             {
                 scorpons.SetActive(true);
+                AudioScript.instance.PlaySFX("Scorpon Spawn");
             }
 
-            if (secondsPassed >= 90)
+            if (secondsPassed > 90 && secondsPassed < 91)
             {
                 hoardes.SetActive(true);
+                AudioScript.instance.PlaySFX("Hoarde Spawn");
             }
 
 
-            if (secondsPassed >= 300)
+            if (secondsPassed > 300 && secondsPassed < 301)
             {
                 boss.SetActive(true);
+                AudioScript.instance.PlaySFX("Bird Spawn");
             }
         }
     }

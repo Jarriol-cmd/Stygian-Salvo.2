@@ -21,12 +21,15 @@ public class EnemyScript : MonoBehaviour
     public double attackTimer = 2;
     public double regAtkTimer;
 
+    public float dTimer;
+
     public float enemyStrengthCounter;
 
     
 
     void Start()
     {
+        dTimer = 1;
 
         if(gameObject.name == "Ghoul(Clone)")
         {
@@ -123,27 +126,39 @@ public class EnemyScript : MonoBehaviour
                 if (gameObject.name == "Ghoul(Clone)")
                 {
                     ItemMenuScripte.instance.numberDefeated += 1;
+                    Destroy(gameObject);
                 }
 
                 if (gameObject.name == "Scorpon(Clone)")
                 {
                     ItemMenuScripte.instance.numberDefeated += 1;
+                    Destroy(gameObject);
                 }
 
                 if (gameObject.name == "Hoarde(Clone)")
                 {
                     ItemMenuScripte.instance.numberDefeated += 2;
+                    Destroy(gameObject);
                 }
 
                 if(gameObject.tag == "Boss")
                 {
-                    ItemMenuScripte.instance.playerCanMove = false;
-                    ItemMenuScripte.instance.inMenu = true;
+                    dTimer -= Time.deltaTime;
 
-                    BosskillerScript.instance.isDead += 1;
+                    dealingDamage = 0;
+                    if (dTimer <= 0)
+                    {
+                        AudioScript.instance.PlaySFX("Wing Death");
+
+                        BosskillerScript.instance.isDead += 1;
+
+                        ItemMenuScripte.instance.playerCanMove = false;
+                        ItemMenuScripte.instance.inMenu = true;
+                        Destroy(gameObject);
+                    }
                 }
 
-                Destroy(gameObject);
+                
             }
         }
     }

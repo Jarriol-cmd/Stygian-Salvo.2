@@ -68,7 +68,7 @@ public class MainMenuButton : MonoBehaviour
 
     public void Soundtest()
     {
-        AudioScript.instance.PlaySFX("Death");
+        AudioScript.instance.PlaySFX("Sound Test");
     }
 
 }

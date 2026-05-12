@@ -28,6 +28,7 @@ public class Death : MonoBehaviour
     {
         if (PlayerScript.instance.currenthealth <= 0)
         {
+
             deathScreen.enabled = true;
             again.SetActive(true);
             menu.SetActive(true);

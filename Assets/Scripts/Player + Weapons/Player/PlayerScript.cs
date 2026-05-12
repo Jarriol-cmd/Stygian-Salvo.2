@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
@@ -142,6 +143,8 @@ public class PlayerScript : MonoBehaviour
 
             if (spheretimer <= 0)
             {
+                AudioScript.instance.PlaySFX("Orb Shoot");
+
                 GameObject clone;
                 clone = Instantiate(blorbType, transform.position, Quaternion.identity);
                 spheretimer = oldspheretimer;
@@ -212,7 +215,7 @@ public class PlayerScript : MonoBehaviour
         }
 
 
-        if (currenthealth <= 0)
+        if (currenthealth <= 0 && ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
             RunDeath();
         }
@@ -245,6 +248,7 @@ public class PlayerScript : MonoBehaviour
         ItemMenuScripte.instance.inMenu = true;
 
         AudioScript.instance.PlaySFX("Death");
+        
         
     }
 

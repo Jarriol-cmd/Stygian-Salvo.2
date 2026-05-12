@@ -98,6 +98,8 @@ public class ItemMenuButton : MonoBehaviour
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
 
+        AudioScript.instance.PlaySFX("Item Select");
+
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }
 
@@ -108,6 +110,8 @@ public class ItemMenuButton : MonoBehaviour
 
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
+
+        AudioScript.instance.PlaySFX("Item Select");
 
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }
@@ -120,6 +124,8 @@ public class ItemMenuButton : MonoBehaviour
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
 
+        AudioScript.instance.PlaySFX("Item Select");
+
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }
 
@@ -130,6 +136,8 @@ public class ItemMenuButton : MonoBehaviour
 
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
+
+        AudioScript.instance.PlaySFX("Item Select");
 
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }
@@ -142,6 +150,8 @@ public class ItemMenuButton : MonoBehaviour
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
 
+        AudioScript.instance.PlaySFX("Item Select");
+
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }
 
@@ -152,6 +162,8 @@ public class ItemMenuButton : MonoBehaviour
 
         ItemMenuScripte.instance.playerCanMove = true;
         ItemMenuScripte.instance.inMenu = false;
+
+        AudioScript.instance.PlaySFX("Item Select");
 
         HiddenStatsScript.instance.currentState = States.SelectingState;
     }

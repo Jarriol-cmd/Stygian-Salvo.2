@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,8 +22,10 @@ public class Winning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(BosskillerScript.instance.isDead >= 1)
+        if(BosskillerScript.instance.isDead >= 1 )
         {
+            
+
             winScreen.enabled = true;
             button.SetActive(true);
             youWon.SetActive(true);
