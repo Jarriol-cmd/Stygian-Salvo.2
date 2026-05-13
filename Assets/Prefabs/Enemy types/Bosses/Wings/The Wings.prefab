@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 370090494000287223}
   - component: {fileID: 4455151997857678663}
-  - component: {fileID: 3424444281982598300}
   - component: {fileID: 8559255815156789683}
   - component: {fileID: 4290678925405618702}
+  - component: {fileID: 9221116320292728332}
   m_Layer: 0
   m_Name: The Wings
   m_TagString: Boss
@@ -94,26 +94,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &3424444281982598300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6928243703410281602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29b1d98420cfa542915b6109aec0720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
-  player: {fileID: 0}
-  speed: 6
-  currHealth: 70
-  maxHealth: 0
-  enHealth: 0
-  attackTimer: 0.5
-  regAtkTimer: 0
-  enemyStrengthCounter: 0
 --- !u!50 &8559255815156789683
 Rigidbody2D:
   serializedVersion: 5
@@ -177,3 +157,24 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.13
+--- !u!114 &9221116320292728332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6928243703410281602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9d22d9decd6224d8b8b74fd9fb6d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wings
+  player: {fileID: 0}
+  speed: 6
+  currHealth: 70
+  maxHealth: 0
+  enHealth: 0
+  attackTimer: 1
+  regAtkTimer: 0
+  dTimer: 0
+  enemyStrengthCounter: 0

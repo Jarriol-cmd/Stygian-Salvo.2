@@ -21,7 +21,6 @@ public class EnemyScript : MonoBehaviour
     public double attackTimer = 2;
     public double regAtkTimer;
 
-    public float dTimer;
 
     public float enemyStrengthCounter;
 
@@ -29,7 +28,7 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
-        dTimer = 1;
+        
 
         if(gameObject.name == "Ghoul(Clone)")
         {
@@ -52,13 +51,7 @@ public class EnemyScript : MonoBehaviour
             regAtkTimer = 5;
         }
 
-        if(gameObject.name == "The Wings(Clone)")
-        {
-            enHealth = 40;
-            dealingDamage = 2;
-            regAtkTimer = 2;
-        }
-
+        
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -141,23 +134,6 @@ public class EnemyScript : MonoBehaviour
                     Destroy(gameObject);
                 }
 
-                if(gameObject.tag == "Boss")
-                {
-                    dTimer -= Time.deltaTime;
-
-                    dealingDamage = 0;
-                    if (dTimer <= 0)
-                    {
-                        AudioScript.instance.PlaySFX("Wing Death");
-
-                        BosskillerScript.instance.isDead += 1;
-
-                        ItemMenuScripte.instance.playerCanMove = false;
-                        ItemMenuScripte.instance.inMenu = true;
-                        Destroy(gameObject);
-                    }
-                }
-
                 
             }
         }
@@ -171,17 +147,20 @@ public class EnemyScript : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                if (gameObject.tag != "Boss")
+                
+               dealingDamage -= PlayerScript.instance.defense;
+
+                if (dealingDamage <= 0) 
+                {
+                   dealingDamage = 0;
+                }
+
+               else
                 {
                     PlayerScript.instance.currenthealth -= (dealingDamage - (PlayerScript.instance.defense));
                 }
 
-                else
-                {
-                    PlayerScript.instance.currenthealth -= dealingDamage;
-                }
-
-                    attackTimer = regAtkTimer;
+                attackTimer = regAtkTimer;
             }
             
         }
