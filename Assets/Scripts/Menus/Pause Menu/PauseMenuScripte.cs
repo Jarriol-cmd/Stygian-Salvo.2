@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -39,7 +38,7 @@ public class PauseMenuScripte : MonoBehaviour
     {
         
 
-        if (escape.triggered)
+        if (escape.triggered && ItemMenuScripte.instance.inMenu == false && ItemMenuScripte.instance.playerCanMove == true)
         {
             OpenPauseMenu();
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class Death : MonoBehaviour
 
     public GameObject youDied;
 
+    public GameObject eventSystem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,12 +30,19 @@ public class Death : MonoBehaviour
     {
         if (PlayerScript.instance.currenthealth <= 0)
         {
+            if (deathScreen.enabled == false)
+            { 
+                eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(again);
+            }
 
             deathScreen.enabled = true;
             again.SetActive(true);
             menu.SetActive(true);
             youDied.SetActive(true);
 
+
+            ItemMenuScripte.instance.inMenu = true;
+            ItemMenuScripte.instance.playerCanMove = false;
         }
 
 

@@ -4,18 +4,18 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
 
-    public Slider musicSlider;
+    public Slider audioSlider;
     public Slider sfxSlider;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        musicSlider.value = PlayerPrefs.GetFloat("Musicvolume");
-        AudioScript.instance.audioVolume = PlayerPrefs.GetFloat("Musicvolume");
+        audioSlider.value = PlayerPrefs.GetFloat("AudioVolume");
+        AudioScript.instance.audioVolume = PlayerPrefs.GetFloat("Audioolume");
         //AudioScript.instance.Play("music");
 
-        sfxSlider.value = PlayerPrefs.GetFloat("Sfxvolume");
-        AudioScript.instance.sfxVolume = PlayerPrefs.GetFloat("Sfxvolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("SfxVolume");
+        AudioScript.instance.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
 
     }
 

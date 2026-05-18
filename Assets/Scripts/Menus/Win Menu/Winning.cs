@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class Winning : MonoBehaviour
     public GameObject button;
 
     public GameObject youWon;
+
+    public GameObject eventSystem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,13 +25,20 @@ public class Winning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(BosskillerScript.instance.isDead >= 1 )
+        if(BosskillerScript.instance.isDead >= 1)
         {
-            
+            if (winScreen.enabled == false)
+            {
+                eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(button);
+            }
 
             winScreen.enabled = true;
             button.SetActive(true);
             youWon.SetActive(true);
+
+            ItemMenuScripte.instance.inMenu = true;
+            ItemMenuScripte.instance.playerCanMove = false;
+            
         }
 
 

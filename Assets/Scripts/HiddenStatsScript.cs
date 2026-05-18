@@ -4,6 +4,7 @@ using Unity.Loading;
 using Unity.Properties;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -40,10 +41,14 @@ public class HiddenStatsScript : MonoBehaviour
     public GameObject sweetHoney;
     public GameObject everFlame;
 
+    public GameObject eventSystem;
+
     public int topOrBottom;
     public int twinOrBottom;
 
     public List<GameObject> trinkets;
+
+    int count;
 
     private void Awake()
     {
@@ -63,7 +68,7 @@ public class HiddenStatsScript : MonoBehaviour
         sweetHoney = honey;
         everFlame = flame;
 
-
+        count = 0;
 
         trinkets = new List<GameObject>();
 
@@ -113,11 +118,14 @@ public class HiddenStatsScript : MonoBehaviour
             topOrBottom = UnityEngine.Random.Range(1, 3);
             twinOrBottom = UnityEngine.Random.Range(1, 3);
 
+            count = 0;
+
         }
 
         if (currentState == States.SelectedState) 
         {
             SetPositions();
+            
         }
 
     }
@@ -126,17 +134,28 @@ public class HiddenStatsScript : MonoBehaviour
 
     void SetPositions()
     {
-
         
+
         {
             if (topOrBottom == 1 && trinkets[index] == flumeFly || twinOrBottom == 1 && trinkets[twindex] == flumeFly)
             {
                 feather.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(feather);
+                    count ++;
+                }
             }
 
             else if (topOrBottom == 2 && trinkets[index] == flumeFly || twinOrBottom == 2 && trinkets[twindex] == flumeFly)
             {
                 feather.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(feather);
+                    count++;
+                }
             }
 
             else
@@ -149,11 +168,21 @@ public class HiddenStatsScript : MonoBehaviour
             if (topOrBottom == 1 && trinkets[index] == orb || twinOrBottom == 1 && trinkets[twindex] == orb)
             {
                 sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(sherBorb);
+                    count++;
+                }
             }
 
             else if (topOrBottom == 2 && trinkets[index] == orb || twinOrBottom == 2 && trinkets[twindex] == orb)
             {
                 sherBorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(sherBorb);
+                    count++;
+                }
             }
 
             else
@@ -166,11 +195,21 @@ public class HiddenStatsScript : MonoBehaviour
             if (topOrBottom == 1 && trinkets[index] == blueOrb || twinOrBottom == 1 && trinkets[twindex] == blueOrb)
             {
                 blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(blorb);
+                    count++;
+                }
             }
 
             else if (topOrBottom == 2 && trinkets[index] == blueOrb || twinOrBottom == 2 && trinkets[twindex] == blueOrb)
             {
                 blorb.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(blorb);
+                    count++;
+                }
             }
 
             else
@@ -182,11 +221,21 @@ public class HiddenStatsScript : MonoBehaviour
             if (topOrBottom == 1 && trinkets[index] == rustyShield || twinOrBottom == 1 && trinkets[twindex] == rustyShield)
             {
                 shield.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(shield);
+                    count++;
+                }
             }
 
             else if (topOrBottom == 2 && trinkets[index] == rustyShield || twinOrBottom == 2 && trinkets[twindex] == rustyShield)
             {
                 shield.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(shield);
+                    count++;
+                }
             }
 
             else
@@ -198,11 +247,21 @@ public class HiddenStatsScript : MonoBehaviour
             if (topOrBottom == 1 && trinkets[index] == sweetHoney || twinOrBottom == 1 && trinkets[twindex] == sweetHoney)
             {
                 sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(sweetHoney);
+                    count++;
+                }
             }
 
             else if (topOrBottom == 2 && trinkets[index] == sweetHoney || twinOrBottom == 2 && trinkets[twindex] == sweetHoney)
             {
                 sweetHoney.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(sweetHoney);
+                    count++;
+                }
             }
 
             else
@@ -214,11 +273,22 @@ public class HiddenStatsScript : MonoBehaviour
             if (topOrBottom == 1 && trinkets[index] == everFlame || twinOrBottom == 1 && trinkets[twindex] == everFlame)
             {
                 everFlame.GetComponent<RectTransform>().localPosition = new Vector3(0, 225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(everFlame);
+                    count++;
+                }
+
             }
 
             else if (topOrBottom == 2 && trinkets[index] == everFlame || twinOrBottom == 2 && trinkets[twindex] == everFlame)
             {
                 everFlame.GetComponent<RectTransform>().localPosition = new Vector3(0, -225f, 0);
+                if (count == 0)
+                {
+                    eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(everFlame);
+                    count++;
+                }
             }
 
             else
@@ -226,7 +296,10 @@ public class HiddenStatsScript : MonoBehaviour
                 everFlame.SetActive(false);
             }
 
+            
+
         }
+
 
     }
 

@@ -84,12 +84,12 @@ public class Wings : MonoBehaviour
         {
             if (collision.name == "Sphere projectile(Clone)")
             {
-                currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldProjCount));
+                currHealth -= ((Time.deltaTime) * (PlayerScript.instance.oldProjCount));
             }
 
             if (collision.name == "Cinders(Clone)")
             {
-                currHealth -= ((2 * Time.deltaTime) * (PlayerScript.instance.oldFlamnum));
+                currHealth -= (Time.deltaTime) * (PlayerScript.instance.oldFlamnum);
             }
 
             if (currHealth <= 0)
@@ -123,9 +123,9 @@ public class Wings : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                
 
-               
+                AudioScript.instance.PlaySFX("Bite");
+
                 PlayerScript.instance.currenthealth -= dealingDamage;
                 
 

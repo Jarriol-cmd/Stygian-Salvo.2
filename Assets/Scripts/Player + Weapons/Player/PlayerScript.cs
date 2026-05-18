@@ -3,7 +3,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
-using static UnityEditor.VersionControl.Asset;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -152,6 +151,7 @@ public class PlayerScript : MonoBehaviour
 
             if (flamTimer <= 0)
             {
+                AudioScript.instance.PlaySFX("Flames");
                 GameObject clone;
                 clone = Instantiate(flamType, transform.position, Quaternion.identity);
                 flamTimer = oldFlamTimer;
@@ -222,7 +222,7 @@ public class PlayerScript : MonoBehaviour
 
 
 
-        if(gameObject.transform.position.x > 40 || gameObject.transform.position.x < -40 || gameObject.transform.position.y > 38 || gameObject.transform.position.y < -38)
+        if(gameObject.transform.position.x > 40 || gameObject.transform.position.x < -40 || gameObject.transform.position.y > 39 || gameObject.transform.position.y < -38)
         {
             gameObject.transform.position = new Vector3(0, 0, 0);
         }

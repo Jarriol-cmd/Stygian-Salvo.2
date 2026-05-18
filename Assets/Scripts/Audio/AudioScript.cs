@@ -19,17 +19,17 @@ public class AudioScript : MonoBehaviour
     void Awake()
     {
 
-        // if instance is null, store a reference to this instance
+       
         if (instance == null)
         {
-            // a reference does not exist, so store it
+            
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
         else
         {
-            // Another instance of this gameobject has been made so destroy it
-            // as we already have one
+            
             Destroy(gameObject);
         }
 
@@ -65,6 +65,8 @@ public class AudioScript : MonoBehaviour
     {
 
     }
+
+
     public void ChangeAudioSourceVolume(string name, float vol)
     {
         AudioSettings s = Array.Find(sounds, SoundSettings => SoundSettings.name == name);

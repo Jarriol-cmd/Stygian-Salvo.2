@@ -147,8 +147,10 @@ public class EnemyScript : MonoBehaviour
 
             if (attackTimer <= 0)
             {
-                
-               dealingDamage -= PlayerScript.instance.defense;
+
+                AudioScript.instance.PlaySFX("Bite");
+
+                dealingDamage -= PlayerScript.instance.defense;
 
                 if (dealingDamage <= 0) 
                 {
