@@ -2524,6 +2524,7 @@ GameObject:
   - component: {fileID: 381607988}
   - component: {fileID: 381607990}
   - component: {fileID: 381607989}
+  - component: {fileID: 381607991}
   m_Layer: 5
   m_Name: Honey
   m_TagString: Untagged
@@ -2570,7 +2571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -397899620, guid: 029030ab7555c8c4e95178103a2328f6, type: 3}
+  m_Sprite: {fileID: -5515535406582948201, guid: eb599d308ceb20342ba4106da6711dfc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2588,6 +2589,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381607987}
   m_CullTransparentMesh: 1
+--- !u!95 &381607991
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381607987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbd1f5b4e217ebc4da7de91849f0dd2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &394718267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216182,6 +216205,7 @@ GameObject:
   - component: {fileID: 499684496}
   - component: {fileID: 499684498}
   - component: {fileID: 499684497}
+  - component: {fileID: 499684499}
   m_Layer: 5
   m_Name: Orb
   m_TagString: Untagged
@@ -216228,7 +216252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4807478495872850987, guid: bf9975811252e7148a0d8715b082b391, type: 3}
+  m_Sprite: {fileID: -5940781818166149764, guid: 7244464c0d54d0e428629dda23694bc5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -216246,6 +216270,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499684495}
   m_CullTransparentMesh: 1
+--- !u!95 &499684499
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499684495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3423a93ef9292c1428477fe545bbe316, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &500318799
 GameObject:
   m_ObjectHideFlags: 0
@@ -219665,6 +219711,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 979244266}
+        m_TargetAssemblyTypeName: BasicButton, Assembly-CSharp
+        m_MethodName: OnSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &815745757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221952,8 +222010,9 @@ GameObject:
   - component: {fileID: 1005400630}
   - component: {fileID: 1005400632}
   - component: {fileID: 1005400631}
+  - component: {fileID: 1005400633}
   m_Layer: 5
-  m_Name: Feather
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221998,7 +222057,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300030, guid: 9603be6d9ac69924f945566fb9497bde, type: 3}
+  m_Sprite: {fileID: -5507372280322210082, guid: 7748b1dbbed956a4893d0c70aa5cf391, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -222016,6 +222075,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005400629}
   m_CullTransparentMesh: 1
+--- !u!95 &1005400633
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005400629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 621518ef3bc72d0488ea6f9b4cd4207e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1011821675
 GameObject:
   m_ObjectHideFlags: 0
@@ -222354,8 +222435,8 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.12148453, g: 0.6603774, b: 0.6019701, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_SelectedColor: {r: 0.4264353, g: 0.41451588, b: 0.764151, a: 1}
+    m_DisabledColor: {r: 0.15792987, g: 0.1806843, b: 0.3679245, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -224928,7 +225009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -225799,6 +225880,7 @@ GameObject:
   - component: {fileID: 1397495292}
   - component: {fileID: 1397495294}
   - component: {fileID: 1397495293}
+  - component: {fileID: 1397495295}
   m_Layer: 5
   m_Name: Cinders
   m_TagString: Untagged
@@ -225845,7 +225927,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1268456874, guid: 029030ab7555c8c4e95178103a2328f6, type: 3}
+  m_Sprite: {fileID: -2466727644049597172, guid: a8c7d5a94bfe46d469360c9c13aeb854, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -225863,6 +225945,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397495291}
   m_CullTransparentMesh: 1
+--- !u!95 &1397495295
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397495291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 48df0c2050582d94ea770427e2717be2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1416742677
 GameObject:
   m_ObjectHideFlags: 0
@@ -225874,6 +225978,7 @@ GameObject:
   - component: {fileID: 1416742678}
   - component: {fileID: 1416742680}
   - component: {fileID: 1416742679}
+  - component: {fileID: 1416742681}
   m_Layer: 5
   m_Name: Feather
   m_TagString: Untagged
@@ -225920,7 +226025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1950262928486771175, guid: 9426f823d94f0a149af677d4a69b6c71, type: 3}
+  m_Sprite: {fileID: 5054193998138095179, guid: c3651402bef5e804aa3480e6515396da, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -225938,6 +226043,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416742677}
   m_CullTransparentMesh: 1
+--- !u!95 &1416742681
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416742677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6461642a0bffaec40be4dc25050c38e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1426144824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232434,6 +232561,7 @@ GameObject:
   - component: {fileID: 1675396016}
   - component: {fileID: 1675396018}
   - component: {fileID: 1675396017}
+  - component: {fileID: 1675396019}
   m_Layer: 5
   m_Name: Shield
   m_TagString: Untagged
@@ -232480,7 +232608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 663869013, guid: 029030ab7555c8c4e95178103a2328f6, type: 3}
+  m_Sprite: {fileID: -430061831152832766, guid: 0170200dacd2b944fbdcd7a37740d658, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -232498,6 +232626,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675396015}
   m_CullTransparentMesh: 1
+--- !u!95 &1675396019
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675396015}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 272191fa1a837b14ebcd0287fa5dbda9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1701983034
 GameObject:
   m_ObjectHideFlags: 0
@@ -234880,7 +235030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sweetest jar of honey - Trinket
+  m_text: Sweetest honey comb - Trinket
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dcb222e699952ff47b0d35f978a12af8, type: 2}
   m_sharedMaterial: {fileID: 5732988876926624050, guid: dcb222e699952ff47b0d35f978a12af8, type: 2}

@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: bf9975811252e7148a0d8715b082b391
+guid: c3651402bef5e804aa3480e6515396da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2695337728728278981
-    second: Blue Orb_0
+      213: 5054193998138095179
+    second: Feather2_0
   - first:
-      213: 1425617299786784397
-    second: Blue Orb_1
+      213: -6215290970998499486
+    second: Feather2_1
   - first:
-      213: -3387440832589977104
-    second: Blue Orb_2
+      213: -5110865354255054383
+    second: Feather2_2
   - first:
-      213: -5524975597477007752
-    second: Blue Orb_3
+      213: 5268345613723087500
+    second: Feather2_3
   - first:
-      213: -6053667595502796361
-    second: Blue Orb_4
+      213: -8799571409132347182
+    second: Feather2_4
   - first:
-      213: 8619244670682409807
-    second: Blue Orb_5
+      213: 5650665085013807550
+    second: Feather2_5
   - first:
-      213: 4815103456698320482
-    second: Blue Orb_6
-  - first:
-      213: 4807478495872850987
-    second: Blue Orb_7
+      213: 8702491597162364634
+    second: Feather2_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,177 +170,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue Orb_0
+      name: Feather2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46beecb9aa142640800000000000000
+      internalID: 5054193998138095179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 92
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26711f9bac9deb9a0800000000000000
+      internalID: -6215290970998499486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 93
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9c6c0f90f8219b0800000000000000
+      internalID: -5110865354255054383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 53
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82b3fb3c6cec1940800000000000000
+      internalID: 5268345613723087500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 52
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0abfeec64a1e580800000000000000
+      internalID: -8799571409132347182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_5
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 52
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb153f0d4f13b6e40800000000000000
+      internalID: 5650665085013807550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feather2_6
       rect:
         serializedVersion: 2
         x: 3
-        y: 31
-        width: 26
-        height: 26
+        y: 12
+        width: 30
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c7ae8e3263c76520800000000000000
-      internalID: 2695337728728278981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_1
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 31
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8e5173816fc8c310800000000000000
-      internalID: 1425617299786784397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_2
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 31
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f922db92846df0d0800000000000000
-      internalID: -3387440832589977104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 31
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87e6ea777f75353b0800000000000000
-      internalID: -5524975597477007752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_4
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b143c5456d0dfba0800000000000000
-      internalID: -6053667595502796361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_5
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4b243c7c55bd9770800000000000000
-      internalID: 8619244670682409807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_6
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2664245151fa2d240800000000000000
-      internalID: 4815103456698320482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_7
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2c94db883897b240800000000000000
-      internalID: 4807478495872850987
+      spriteID: ade3fa5fff575c870800000000000000
+      internalID: 8702491597162364634
       vertices: []
       indices: 
       edges: []
@@ -352,7 +327,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 14beb0b26029daa4c982f867907181c4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -360,18 +335,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Blue Orb_0: 2695337728728278981
-      Blue Orb_1: 1425617299786784397
-      Blue Orb_2: -3387440832589977104
-      Blue Orb_3: -5524975597477007752
-      Blue Orb_4: -6053667595502796361
-      Blue Orb_5: 8619244670682409807
-      Blue Orb_6: 4815103456698320482
-      Blue Orb_7: 4807478495872850987
+      Feather2_0: 5054193998138095179
+      Feather2_1: -6215290970998499486
+      Feather2_2: -5110865354255054383
+      Feather2_3: 5268345613723087500
+      Feather2_4: -8799571409132347182
+      Feather2_5: 5650665085013807550
+      Feather2_6: 8702491597162364634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

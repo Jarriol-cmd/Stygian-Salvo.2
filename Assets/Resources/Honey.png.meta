@@ -1,31 +1,52 @@
 fileFormatVersion: 2
-guid: bf9975811252e7148a0d8715b082b391
+guid: eb599d308ceb20342ba4106da6711dfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2695337728728278981
-    second: Blue Orb_0
+      213: -3403754614272994563
+    second: Honey_0
   - first:
-      213: 1425617299786784397
-    second: Blue Orb_1
+      213: -4610926365028219954
+    second: Honey_1
   - first:
-      213: -3387440832589977104
-    second: Blue Orb_2
+      213: -2983718347346451657
+    second: Honey_2
   - first:
-      213: -5524975597477007752
-    second: Blue Orb_3
+      213: 8240882142017769425
+    second: Honey_3
   - first:
-      213: -6053667595502796361
-    second: Blue Orb_4
+      213: -6668861691689949236
+    second: Honey_4
   - first:
-      213: 8619244670682409807
-    second: Blue Orb_5
+      213: -9009446389701903907
+    second: Honey_5
   - first:
-      213: 4815103456698320482
-    second: Blue Orb_6
+      213: -5515535406582948201
+    second: Honey_6
   - first:
-      213: 4807478495872850987
-    second: Blue Orb_7
+      213: -4397714482430167922
+    second: Honey_7
+  - first:
+      213: -8814172831830959475
+    second: Honey_8
+  - first:
+      213: -7740747009300217902
+    second: Honey_9
+  - first:
+      213: 7343628288600885179
+    second: Honey_10
+  - first:
+      213: -2435119052787016027
+    second: Honey_11
+  - first:
+      213: -5018995677346469759
+    second: Honey_12
+  - first:
+      213: -1467598489599210702
+    second: Honey_13
+  - first:
+      213: 5126128227282411523
+    second: Honey_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,13 +194,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue Orb_0
+      name: Honey_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 31
-        width: 26
-        height: 26
+        x: 0
+        y: 182
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c7ae8e3263c76520800000000000000
-      internalID: 2695337728728278981
+      spriteID: df259a1563f63c0d0800000000000000
+      internalID: -3403754614272994563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_1
+      name: Honey_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 31
-        width: 26
-        height: 26
+        x: 84
+        y: 182
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e5173816fc8c310800000000000000
-      internalID: 1425617299786784397
+      spriteID: ec3820796e2b200c0800000000000000
+      internalID: -4610926365028219954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_2
+      name: Honey_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 31
-        width: 26
-        height: 26
+        x: 168
+        y: 182
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f922db92846df0d0800000000000000
-      internalID: -3387440832589977104
+      spriteID: 7336994b8f3b796d0800000000000000
+      internalID: -2983718347346451657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_3
+      name: Honey_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 31
-        width: 26
-        height: 26
+        x: 0
+        y: 108
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87e6ea777f75353b0800000000000000
-      internalID: -5524975597477007752
+      spriteID: 1df44d665ae7d5270800000000000000
+      internalID: 8240882142017769425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_4
+      name: Honey_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 26
+        x: 84
+        y: 108
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b143c5456d0dfba0800000000000000
-      internalID: -6053667595502796361
+      spriteID: cc72c92ef917373a0800000000000000
+      internalID: -6668861691689949236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_5
+      name: Honey_5
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3
-        width: 26
-        height: 26
+        x: 168
+        y: 108
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4b243c7c55bd9770800000000000000
-      internalID: 8619244670682409807
+      spriteID: dd974ee1e3408f280800000000000000
+      internalID: -9009446389701903907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_6
+      name: Honey_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 3
-        width: 26
-        height: 26
+        x: 0
+        y: 34
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,30 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2664245151fa2d240800000000000000
-      internalID: 4815103456698320482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_7
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2c94db883897b240800000000000000
-      internalID: 4807478495872850987
+      spriteID: 79e988035c1e473b0800000000000000
+      internalID: -5515535406582948201
       vertices: []
       indices: 
       edges: []
@@ -352,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 14beb0b26029daa4c982f867907181c4
+    spriteID: 8e72804f2f386a7429f0c330cae62668
     internalID: 0
     vertices: []
     indices: 
@@ -362,16 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":84.0,"y":74.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Blue Orb_0: 2695337728728278981
-      Blue Orb_1: 1425617299786784397
-      Blue Orb_2: -3387440832589977104
-      Blue Orb_3: -5524975597477007752
-      Blue Orb_4: -6053667595502796361
-      Blue Orb_5: 8619244670682409807
-      Blue Orb_6: 4815103456698320482
-      Blue Orb_7: 4807478495872850987
+      Honey_0: -3403754614272994563
+      Honey_1: -4610926365028219954
+      Honey_2: -2983718347346451657
+      Honey_3: 8240882142017769425
+      Honey_4: -6668861691689949236
+      Honey_5: -9009446389701903907
+      Honey_6: -5515535406582948201
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

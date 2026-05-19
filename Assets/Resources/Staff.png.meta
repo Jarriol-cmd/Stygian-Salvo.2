@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: bf9975811252e7148a0d8715b082b391
+guid: 7244464c0d54d0e428629dda23694bc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2695337728728278981
-    second: Blue Orb_0
+      213: -5940781818166149764
+    second: Staff_0
   - first:
-      213: 1425617299786784397
-    second: Blue Orb_1
+      213: 3527205280244131103
+    second: Staff_1
   - first:
-      213: -3387440832589977104
-    second: Blue Orb_2
+      213: 5991183894910654214
+    second: Staff_2
   - first:
-      213: -5524975597477007752
-    second: Blue Orb_3
+      213: 3150073182911318099
+    second: Staff_3
   - first:
-      213: -6053667595502796361
-    second: Blue Orb_4
+      213: -392789525872930389
+    second: Staff_4
   - first:
-      213: 8619244670682409807
-    second: Blue Orb_5
+      213: -6015175495968284412
+    second: Staff_5
   - first:
-      213: 4815103456698320482
-    second: Blue Orb_6
+      213: -537738138275213305
+    second: Staff_6
   - first:
-      213: 4807478495872850987
-    second: Blue Orb_7
+      213: -6946313528647475380
+    second: Staff_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,177 +173,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue Orb_0
+      name: Staff_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 31
-        width: 26
+        x: 7
+        y: 97
+        width: 22
         height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c7ae8e3263c76520800000000000000
-      internalID: 2695337728728278981
+      spriteID: c7d7b18796a1e8da0800000000000000
+      internalID: -5940781818166149764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_1
+      name: Staff_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 31
-        width: 26
-        height: 26
+        x: 40
+        y: 96
+        width: 24
+        height: 30
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e5173816fc8c310800000000000000
-      internalID: 1425617299786784397
+      spriteID: f1565d2b38623f030800000000000000
+      internalID: 3527205280244131103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_2
+      name: Staff_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 31
-        width: 26
-        height: 26
+        x: 84
+        y: 95
+        width: 28
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f922db92846df0d0800000000000000
-      internalID: -3387440832589977104
+      spriteID: 607d0308206f42350800000000000000
+      internalID: 5991183894910654214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_3
+      name: Staff_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 31
-        width: 26
-        height: 26
+        x: 4
+        y: 56
+        width: 25
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87e6ea777f75353b0800000000000000
-      internalID: -5524975597477007752
+      spriteID: 358c9ebbede47bb20800000000000000
+      internalID: 3150073182911318099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_4
+      name: Staff_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 26
+        x: 38
+        y: 58
+        width: 23
+        height: 29
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b143c5456d0dfba0800000000000000
-      internalID: -6053667595502796361
+      spriteID: ba199ded1088c8af0800000000000000
+      internalID: -392789525872930389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_5
+      name: Staff_5
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3
-        width: 26
-        height: 26
+        x: 80
+        y: 58
+        width: 22
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4b243c7c55bd9770800000000000000
-      internalID: 8619244670682409807
+      spriteID: 4012d2591cdc58ca0800000000000000
+      internalID: -6015175495968284412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_6
+      name: Staff_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 3
-        width: 26
+        x: 4
+        y: 22
+        width: 22
         height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2664245151fa2d240800000000000000
-      internalID: 4815103456698320482
+      spriteID: 7001de523029988f0800000000000000
+      internalID: -537738138275213305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_7
+      name: Staff_7
       rect:
         serializedVersion: 2
-        x: 99
-        y: 3
-        width: 26
+        x: 38
+        y: 20
+        width: 22
         height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2c94db883897b240800000000000000
-      internalID: 4807478495872850987
+      spriteID: c4f1a7a16acb99f90800000000000000
+      internalID: -6946313528647475380
       vertices: []
       indices: 
       edges: []
@@ -352,7 +352,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 14beb0b26029daa4c982f867907181c4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -360,18 +360,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Blue Orb_0: 2695337728728278981
-      Blue Orb_1: 1425617299786784397
-      Blue Orb_2: -3387440832589977104
-      Blue Orb_3: -5524975597477007752
-      Blue Orb_4: -6053667595502796361
-      Blue Orb_5: 8619244670682409807
-      Blue Orb_6: 4815103456698320482
-      Blue Orb_7: 4807478495872850987
+      Staff_0: -5940781818166149764
+      Staff_1: 3527205280244131103
+      Staff_2: 5991183894910654214
+      Staff_3: 3150073182911318099
+      Staff_4: -392789525872930389
+      Staff_5: -6015175495968284412
+      Staff_6: -537738138275213305
+      Staff_7: -6946313528647475380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

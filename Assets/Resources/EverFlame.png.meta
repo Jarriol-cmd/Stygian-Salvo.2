@@ -1,31 +1,94 @@
 fileFormatVersion: 2
-guid: bf9975811252e7148a0d8715b082b391
+guid: a8c7d5a94bfe46d469360c9c13aeb854
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2695337728728278981
-    second: Blue Orb_0
+      213: -2466727644049597172
+    second: EverFlame_0
   - first:
-      213: 1425617299786784397
-    second: Blue Orb_1
+      213: 8128725232987733671
+    second: EverFlame_1
   - first:
-      213: -3387440832589977104
-    second: Blue Orb_2
+      213: 3147526581124813009
+    second: EverFlame_2
   - first:
-      213: -5524975597477007752
-    second: Blue Orb_3
+      213: -8048797135434971289
+    second: EverFlame_3
   - first:
-      213: -6053667595502796361
-    second: Blue Orb_4
+      213: -1057734047481903158
+    second: EverFlame_4
   - first:
-      213: 8619244670682409807
-    second: Blue Orb_5
+      213: -8433939776719516026
+    second: EverFlame_5
   - first:
-      213: 4815103456698320482
-    second: Blue Orb_6
+      213: -2005965936313876310
+    second: EverFlame_6
   - first:
-      213: 4807478495872850987
-    second: Blue Orb_7
+      213: -1317171467879765800
+    second: EverFlame_7
+  - first:
+      213: 8846182824262420371
+    second: EverFlame_8
+  - first:
+      213: -8551207828102478676
+    second: EverFlame_9
+  - first:
+      213: 2298866617692710418
+    second: EverFlame_10
+  - first:
+      213: -7935268773344275538
+    second: EverFlame_11
+  - first:
+      213: 5964363438200067860
+    second: EverFlame_12
+  - first:
+      213: -7788857634511103480
+    second: EverFlame_13
+  - first:
+      213: 3349330727945215244
+    second: EverFlame_14
+  - first:
+      213: 541397604007782702
+    second: EverFlame_15
+  - first:
+      213: -7761695558674162063
+    second: EverFlame_16
+  - first:
+      213: 5794528189187210839
+    second: EverFlame_17
+  - first:
+      213: 2495086081882620451
+    second: EverFlame_18
+  - first:
+      213: 6612623538261668280
+    second: EverFlame_19
+  - first:
+      213: -1888131837379074565
+    second: EverFlame_20
+  - first:
+      213: 467160477786744523
+    second: EverFlame_21
+  - first:
+      213: -6570128048432036039
+    second: EverFlame_22
+  - first:
+      213: 37553851249890919
+    second: EverFlame_23
+  - first:
+      213: 490625215218928326
+    second: EverFlame_24
+  - first:
+      213: -1960244895973865867
+    second: EverFlame_25
+  - first:
+      213: -2509853592113625204
+    second: EverFlame_26
+  - first:
+      213: 6736740904870478275
+    second: EverFlame_27
+  - first:
+      213: -6805462948470126644
+    second: EverFlame_28
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -173,13 +236,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue Orb_0
+      name: EverFlame_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 31
-        width: 26
-        height: 26
+        x: 0
+        y: 92
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c7ae8e3263c76520800000000000000
-      internalID: 2695337728728278981
+      spriteID: c0d99cae64c64cdd0800000000000000
+      internalID: -2466727644049597172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_1
+      name: EverFlame_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 31
-        width: 26
-        height: 26
+        x: 42
+        y: 92
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8e5173816fc8c310800000000000000
-      internalID: 1425617299786784397
+      spriteID: 7aefcf418880fc070800000000000000
+      internalID: 8128725232987733671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_2
+      name: EverFlame_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 31
-        width: 26
-        height: 26
+        x: 84
+        y: 92
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f922db92846df0d0800000000000000
-      internalID: -3387440832589977104
+      spriteID: 1d05b0dcfb24eab20800000000000000
+      internalID: 3147526581124813009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_3
+      name: EverFlame_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 31
-        width: 26
-        height: 26
+        x: 0
+        y: 56
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87e6ea777f75353b0800000000000000
-      internalID: -5524975597477007752
+      spriteID: 767873156adec4090800000000000000
+      internalID: -8048797135434971289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue Orb_4
+      name: EverFlame_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 26
+        x: 42
+        y: 56
+        width: 42
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,74 +339,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b143c5456d0dfba0800000000000000
-      internalID: -6053667595502796361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_5
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f4b243c7c55bd9770800000000000000
-      internalID: 8619244670682409807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_6
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2664245151fa2d240800000000000000
-      internalID: 4815103456698320482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Blue Orb_7
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 3
-        width: 26
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2c94db883897b240800000000000000
-      internalID: 4807478495872850987
+      spriteID: ac74109ec7c2251f0800000000000000
+      internalID: -1057734047481903158
       vertices: []
       indices: 
       edges: []
@@ -352,7 +349,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 14beb0b26029daa4c982f867907181c4
+    spriteID: d47e9b7ed72a28442a048b92c3c23e4f
     internalID: 0
     vertices: []
     indices: 
@@ -362,16 +359,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":42.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Blue Orb_0: 2695337728728278981
-      Blue Orb_1: 1425617299786784397
-      Blue Orb_2: -3387440832589977104
-      Blue Orb_3: -5524975597477007752
-      Blue Orb_4: -6053667595502796361
-      Blue Orb_5: 8619244670682409807
-      Blue Orb_6: 4815103456698320482
-      Blue Orb_7: 4807478495872850987
+      EverFlame_0: -2466727644049597172
+      EverFlame_1: 8128725232987733671
+      EverFlame_2: 3147526581124813009
+      EverFlame_3: -8048797135434971289
+      EverFlame_4: -1057734047481903158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -27,13 +27,15 @@ public class Winning : MonoBehaviour
     {
         if(BosskillerScript.instance.isDead >= 1)
         {
+            button.SetActive(true);
+
             if (winScreen.enabled == false)
             {
                 eventSystem.GetComponent<EventSystem>().SetSelectedGameObject(button);
             }
 
             winScreen.enabled = true;
-            button.SetActive(true);
+            
             youWon.SetActive(true);
 
             ItemMenuScripte.instance.inMenu = true;
