@@ -2012,7 +2012,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-    loop: 0
+    loop: 1
     mixerGroup: {fileID: 7431520227466878153, guid: 6091e58bde4a1b24e9d33d1c6ac53bc2, type: 2}
   mute: 0
 --- !u!4 &986142577
