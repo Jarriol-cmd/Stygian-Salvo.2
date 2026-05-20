@@ -17,6 +17,15 @@ public class MainMenu : MonoBehaviour
         sfxSlider.value = PlayerPrefs.GetFloat("SfxVolume");
         AudioScript.instance.sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
 
+        if (PlayerPrefs.GetFloat("SfxVolume") <= 0)
+        {
+            sfxSlider.value = 1f;
+        }
+
+        if (PlayerPrefs.GetFloat("AudioVolume") <= 0)
+        {
+            audioSlider.value = 1f;
+        }
     }
 
     // Update is called once per frame
