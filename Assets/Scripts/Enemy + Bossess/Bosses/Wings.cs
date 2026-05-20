@@ -21,7 +21,9 @@ public class Wings : MonoBehaviour
 
     public float enemyStrengthCounter;
 
+    public Animator anim;
 
+    public bool isFacingRight;
 
     void Start()
     {
@@ -64,6 +66,16 @@ public class Wings : MonoBehaviour
 
             // move sprite towards the target location
             transform.position = Vector2.MoveTowards(transform.position, target, step);
+
+            if(target.x - transform.position.x > 0 && isFacingRight == false)
+            {
+                Flip();
+            }
+
+            if (target.x - transform.position.x < 0 && isFacingRight == true)
+            {
+                Flip();
+            }
         }
 
         if (ItemMenuScripte.instance.playerCanMove == false)
@@ -96,6 +108,8 @@ public class Wings : MonoBehaviour
             {
                 
                     dTimer -= Time.deltaTime;
+
+                anim.SetBool("IsDying", true);    
 
                     dealingDamage = 0;
                     if (dTimer <= 0)
@@ -135,4 +149,12 @@ public class Wings : MonoBehaviour
         }
     }
 
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localscale = transform.localScale;
+        localscale.x *= -1f;
+        transform.localScale = localscale;
+    }
 }

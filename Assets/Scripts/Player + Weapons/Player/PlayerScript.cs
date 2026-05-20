@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public int sweetestHoney = 0;
     public int everFlame = 0;
 
+    public Animator anim;
 
     double oldspheretimer = 4;
     double oldFlamTimer = 10;
@@ -58,7 +59,7 @@ public class PlayerScript : MonoBehaviour
     public int maxhealth = 10;
     public int currenthealth = 10;
 
-    
+    public bool isFacingRight;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -81,6 +82,8 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.SetBool("Walking", false);
+
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         { 
            spheretimer -= (Time.deltaTime);
@@ -123,9 +126,26 @@ public class PlayerScript : MonoBehaviour
 
         if (ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
+            if (rb.linearVelocity.magnitude > 0.000001)
+            {
+                anim.SetBool("Walking", true);
+            }
+
+            if (rb.linearVelocity.x < 0 && isFacingRight == false)
+            {
+                Flip();
+            }
+
+            if (rb.linearVelocity.x > 0 && isFacingRight == true)
+            {
+                Flip();
+            }
+
             if (flumeflyFeatherNumber < 15)
             {
                 rb.linearVelocity = movement.ReadValue<Vector2>() * flumeflyFeatherNumber;
+
+
             }
 
             else if (flumeflyFeatherNumber == 15)
@@ -168,6 +188,7 @@ public class PlayerScript : MonoBehaviour
         if (ItemMenuScripte.instance.playerCanMove == false)
         {
             rb.linearVelocity = movement.ReadValue<Vector2>() * 0;
+            anim.SetBool("Walking", false);
         }
 
         if (currenthealth > maxhealth)
@@ -218,6 +239,7 @@ public class PlayerScript : MonoBehaviour
         if (currenthealth <= 0 && ItemMenuScripte.instance.playerCanMove == true && ItemMenuScripte.instance.inMenu == false)
         {
             RunDeath();
+            anim.SetBool("Walking", false);
         }
 
 
@@ -252,6 +274,13 @@ public class PlayerScript : MonoBehaviour
         
     }
 
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localscale = transform.localScale;
+        localscale.x *= -1f;
+        transform.localScale = localscale;
+    }
 
 }
 

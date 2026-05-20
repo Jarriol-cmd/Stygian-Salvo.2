@@ -24,7 +24,7 @@ public class EnemyScript : MonoBehaviour
 
     public float enemyStrengthCounter;
 
-    
+    public bool isFacingRight;
 
     void Start()
     {
@@ -84,6 +84,16 @@ public class EnemyScript : MonoBehaviour
 
             // move sprite towards the target location
             transform.position = Vector2.MoveTowards(transform.position, target, step);
+
+            if (target.x - transform.position.x > 0 && isFacingRight == false)
+            {
+                Flip();
+            }
+
+            if (target.x - transform.position.x < 0 && isFacingRight == true)
+            {
+                Flip();
+            }
         }
 
         if (ItemMenuScripte.instance.playerCanMove == false)
@@ -168,4 +178,11 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localscale = transform.localScale;
+        localscale.x *= -1f;
+        transform.localScale = localscale;
+    }
 }

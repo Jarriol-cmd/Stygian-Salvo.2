@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 6122127992007474054}
   - component: {fileID: -319086518546859410}
   - component: {fileID: 1706865077954166567}
+  - component: {fileID: 2653418694453125822}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -167,7 +168,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1335800818511509144}
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -2311659948842064771, guid: 7666a518736f79c46aee123170601816, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -267,7 +268,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.08
+  m_Radius: 0.17999999
 --- !u!114 &-319086518546859410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,9 @@ MonoBehaviour:
   sphereProjNum: 1
   rustedShield: 1
   sweetestHoney: 0
+  everFlame: 0
+  anim: {fileID: 2653418694453125822}
+  oldFlamnum: 0
   oldProjCount: 1
   oldRustedShield: 1
   oldSweets: 0
@@ -297,7 +301,9 @@ MonoBehaviour:
   xvel: 0
   yvel: 0
   spheretimer: 4
-  weaponType: {fileID: 0}
+  flamTimer: 10
+  blorbType: {fileID: 0}
+  flamType: {fileID: 0}
   maxhealth: 10
   currenthealth: 10
 --- !u!50 &1706865077954166567
@@ -327,3 +333,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2653418694453125822
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6996423042805386366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: edf57414206418042afab7a327c453ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
